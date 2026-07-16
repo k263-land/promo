@@ -1,0 +1,8 @@
+{
+  "app_ver": "260719",
+  "min_ver": "260719",
+  "block": false,
+  "message": "",
+  "updated_at": "2026-07-16",
+  "note": "min_ver를 올리거나 block:true로 바꾸면 이미 배포된 index.html이 열람 즉시 차단됩니다."
+}
