@@ -1,0 +1,9 @@
+{
+  "app_ver": "260719",
+  "min_ver": "260719",
+  "block": true,
+  "message": "",
+  "download_url": "",
+  "updated_at": "2026-07-16",
+  "note": "수정사항 발생 시 워크플로우: 1) index.html 수정 + APP_VER 올리기 2) 그룹웨어에 새 index.html 게시(같은 글 수정 or 새 글) 3) 이 파일의 min_ver를 새 APP_VER로 올리고, message에 안내문구, download_url에 그룹웨어 게시글 주소 입력 → 기존 배포본 열람자는 즉시 안내+버튼 노출"
+}
