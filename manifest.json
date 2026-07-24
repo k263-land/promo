@@ -1,9 +1,0 @@
-{
- "current": "2026-07",
- "months": [
-  "2026-07",
-  "2026-06",
-  "2026-05"
- ],
- "note": "months는 최신순. 월 전환 시: 새 월 폴더(data.json) 업로드 → current 변경 + months 맨앞 추가 → 4개월 초과분 폴더 삭제. setmap.json은 SET구성 갱신 시에만 교체."
-}
