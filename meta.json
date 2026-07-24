@@ -1,0 +1,9 @@
+{
+  "app_ver": "260780",
+  "min_ver": "260780",
+  "block": false,
+  "message": "판촉 변경사항 발생으로 GW-판촉게시판에서 최신파일로 다운받아 주시기 바랍니다",
+  "download_url": "https://portal.etland.co.kr/ekp/view/board/article/brdAtclViewPopup?atclId=BA202535070194080009754&access=",
+  "updated_at": "2026-07-23",
+  "note": "수정사항 발생 시 워크플로우: 1) index.html 수정 + APP_VER 올리기 2) 그룹웨어에 새 index.html 게시 3) 이 파일의 min_ver를 새 APP_VER로 올리고 message/download_url 갱신 → 기존 배포본 열람자에게 즉시 안내+버튼 노출"
+}
