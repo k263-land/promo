@@ -1,0 +1,22 @@
+{
+  "app_ver": 260801,
+  "min_ver": "260797",
+  "block": false,
+  "message": "판촉 변경사항이 반영되었습니다. 브라우저 새로고침(재접속) 후 이용해 주시기 바랍니다. 계속 동일하면 GW-판촉게시판 링크로 다시 접속해 주세요.",
+  "download_url": "https://portal.etland.co.kr/ekp/view/board/article/brdAtclViewPopup?atclId=BA206166916805792006356&access=",
+  "updated_at": "2026-07-26",
+  "note": "URL 배포 방식. 주요 변경 시 PW 변경 + 게시판 안내가 1차 수단이며, min_ver는 구버전 '캐시' 차단용으로만 운영(260797 = 데이터 정합성 확보 시점). gate_update / gate_notice 문구는 이 파일만 고치면 즉시 반영되며 index.html 교체 불필요. 편집은 hashgen.html 사용.",
+  "gate_enabled": true,
+  "gate_hash": "8c7773b5e8cd0d9f5189daf88c0a949040320c82ed7076876487b6f2f8ac1cbd",
+  "gate_msg": "비밀번호는 그룹웨어 판촉게시판 공지를 확인해 주세요.",
+  "gate_url": "https://portal.etland.co.kr/ekp/view/board/article/brdAtclViewPopup?atclId=BA206166916805792006356&access=",
+  "gate_hash_admin": "888df25ae35772424a560c7152a1de794440e0ea5cfee62828333a456a506e05",
+  "gate_update": "",
+  "gate_notice_title": "※ 참고 안내",
+  "gate_notice": [
+    "삼성/LG 다품목·금액대성 통합",
+    "LG 입주/혼수는 제외",
+    "기존 엑셀/PPT 등 공지 병행",
+    "주요 변경 발생 시 PW 변경(게시판 안내)"
+  ]
+}
