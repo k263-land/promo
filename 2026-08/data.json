@@ -1,0 +1,3920 @@
+{
+  "months": {
+    "promo_order": [
+      "allstar"
+    ],
+    "promos": {
+      "allstar": {
+        "brand": "lg",
+        "name": "LG 올스타",
+        "title": "'26.8월 <span class='em'>LG 올스타점</span> 판촉",
+        "weekly": true,
+        "meta": "운영 <b>주차 단위 · 금~월 4일간</b>",
+        "dataFile": "data/allstar.json",
+        "cbTitle": "판촉 내용 — 700만 이상 구매 시 판매금액 정률 캐시백",
+        "cbNote": "",
+        "exclude": "<span class='hl'>AV(사운드바)</span> · <span class='hl'>일반냉장고</span>",
+        "excludeSub": "※ 제외 품목 포함 시 판촉 금액 합산 불가 — 계산 전 必 확인",
+        "deliverHead": "<span style='color:var(--lg-red)'>8~9월</span> 인도 → 10월 C/B 통합반영 (판매 후 익익월 일괄 반영)",
+        "flow": [
+          [
+            "판매",
+            "26.8월",
+            "행사기간 내",
+            1
+          ],
+          [
+            "인도 완료",
+            "26.8~9월",
+            "판매월 포함 2개월",
+            1
+          ],
+          [
+            "검증",
+            "26.10월 初",
+            "상품기획G 검증 必",
+            0
+          ],
+          [
+            "반영",
+            "26.10월",
+            "C/B 대상 반영",
+            0
+          ],
+          [
+            "지급",
+            "10월末~11월初",
+            "카드사별 상이",
+            0
+          ]
+        ],
+        "flowNote": "26.9월 이후 인도건은 셀아웃 사전공유 필요, 판매 후 <b>2개월 이상 경과건 인정 불가</b>",
+        "cautions": [
+          "<b>행사기간 內 판매</b> 및 인도조건 內 <b>배송 완료건</b> 한정 지급",
+          "동일품목 <b>3대 이상</b> 구매건 제외",
+          "전표당 인수자 <b>2명까지만</b> 인정",
+          "구독 판매건 <b>출하가</b> 적용 (전자랜드 전산 기준)"
+        ],
+        "cbType": "rate",
+        "rate": {
+          "chgBadge": "7월 대비 운영방법 변경 주의",
+          "chgText": "판매금액 기준 <b>모델별</b> 일시불 3% · 구독 7% 정률 적용<i>계산방식이 달라지므로 현장 사전숙지 필요</i>",
+          "entry": {
+            "k": "진입조건",
+            "v": "700만 ↑",
+            "s": "전표 구매금액 합산 기준<br>(제외품목 주의)"
+          },
+          "rates": [
+            {
+              "k": "일시불",
+              "v": "3%",
+              "s": "모델별 전산등록가 기준",
+              "pct": 3,
+              "demo": 400
+            },
+            {
+              "k": "구독",
+              "v": "7%",
+              "s": "전자랜드 전산출하가 기준",
+              "pct": 7,
+              "demo": 300,
+              "sub": true
+            }
+          ],
+          "calcExTitle": "계산 예시 — 700만 전표",
+          "calcExHead": [
+            "결제 구분",
+            "판매금액",
+            "혜택율",
+            "C/B"
+          ],
+          "calcEx": [
+            [
+              "일시불",
+              "400만",
+              "3%",
+              "12만"
+            ],
+            [
+              "구독",
+              "300만",
+              "7%",
+              "21만"
+            ]
+          ],
+          "calcExSum": [
+            "합계",
+            "700만",
+            "—",
+            "33만"
+          ],
+          "calc": true,
+          "calcTitle": "간이 계산기 — 금액 입력 시 예상 C/B 자동 산출",
+          "calcNote": "※ <b>참고용</b> — 실제 지급액은 모델별 반올림으로 수만원 차이 발생 가능",
+          "notes": [
+            "혜택금액은 <b>모델별 개별 계산 → 만원 단위 반올림 → 합산</b>",
+            "소액 모델 유의 — <b style='color:var(--lg-red)'>일시불 약 17만 미만 · 구독 약 7만 미만</b> 모델은 <b>제외</b>"
+          ],
+          "roundEx": "ex. 10만 × 3% = 3천 → <b>0원</b> / 150만 × 3% = 4.5만 → <b>5만</b>",
+          "pcardLine": "700만↑ 정률 3~7%<br>주차 단위"
+        }
+      }
+    },
+    "data": {
+      "allstar": [
+        {
+          "week": 1,
+          "region": "서울",
+          "store": "용산본점",
+          "code": "300010",
+          "start": "2026-07-31",
+          "end": "2026-08-03",
+          "note": "우리"
+        },
+        {
+          "week": 1,
+          "region": "서울",
+          "store": "양주점",
+          "code": "301040",
+          "start": "2026-07-31",
+          "end": "2026-08-03",
+          "note": "확정"
+        },
+        {
+          "week": 1,
+          "region": "서울",
+          "store": "일산점",
+          "code": "300400",
+          "start": "2026-07-31",
+          "end": "2026-08-03",
+          "note": "확정"
+        },
+        {
+          "week": 1,
+          "region": "서울",
+          "store": "운정점",
+          "code": "301500",
+          "start": "2026-07-31",
+          "end": "2026-08-03",
+          "note": "비고"
+        },
+        {
+          "week": 1,
+          "region": "중부",
+          "store": "대전본점",
+          "code": "300430",
+          "start": "2026-07-31",
+          "end": "2026-08-03",
+          "note": "* 26.9월 이후 인도건 셀아웃 사전공유"
+        },
+        {
+          "week": 1,
+          "region": "중부",
+          "store": "분평점",
+          "code": "300300",
+          "start": "2026-07-31",
+          "end": "2026-08-03",
+          "note": "* 2개월 이상 경과不(셀아웃 必 공유)"
+        },
+        {
+          "week": 1,
+          "region": "중부",
+          "store": "쌍용점",
+          "code": "300090",
+          "start": "2026-07-31",
+          "end": "2026-08-03",
+          "note": "확정"
+        },
+        {
+          "week": 1,
+          "region": "중부",
+          "store": "중리점",
+          "code": "300440",
+          "start": "2026-07-31",
+          "end": "2026-08-03",
+          "note": "확정"
+        },
+        {
+          "week": 1,
+          "region": "서부",
+          "store": "익산점",
+          "code": "300150",
+          "start": "2026-07-31",
+          "end": "2026-08-03",
+          "note": "확정"
+        },
+        {
+          "week": 1,
+          "region": "서부",
+          "store": "상무점",
+          "code": "300930",
+          "start": "2026-07-31",
+          "end": "2026-08-03",
+          "note": "확정"
+        },
+        {
+          "week": 1,
+          "region": "서부",
+          "store": "첨단점",
+          "code": "301470",
+          "start": "2026-07-31",
+          "end": "2026-08-03",
+          "note": "확정"
+        },
+        {
+          "week": 1,
+          "region": "서부",
+          "store": "인후점",
+          "code": "300470",
+          "start": "2026-07-31",
+          "end": "2026-08-03",
+          "note": "확정"
+        },
+        {
+          "week": 1,
+          "region": "서부",
+          "store": "서신점",
+          "code": "300080",
+          "start": "2026-07-31",
+          "end": "2026-08-03",
+          "note": "확정"
+        },
+        {
+          "week": 1,
+          "region": "경북",
+          "store": "오광장점",
+          "code": "300250",
+          "start": "2026-07-31",
+          "end": "2026-08-03",
+          "note": "확정"
+        },
+        {
+          "week": 1,
+          "region": "경북",
+          "store": "죽전점",
+          "code": "300330",
+          "start": "2026-07-31",
+          "end": "2026-08-03",
+          "note": "확정"
+        },
+        {
+          "week": 1,
+          "region": "경북",
+          "store": "광평점",
+          "code": "300800",
+          "start": "2026-07-31",
+          "end": "2026-08-03",
+          "note": "확정"
+        },
+        {
+          "week": 1,
+          "region": "부산",
+          "store": "울산삼산점",
+          "code": "300060",
+          "start": "2026-07-31",
+          "end": "2026-08-03",
+          "note": "확정"
+        },
+        {
+          "week": 1,
+          "region": "남부",
+          "store": "합포점",
+          "code": "300460",
+          "start": "2026-07-31",
+          "end": "2026-08-03",
+          "note": "확정"
+        },
+        {
+          "week": 1,
+          "region": "남부",
+          "store": "상남점",
+          "code": "300270",
+          "start": "2026-07-31",
+          "end": "2026-08-03",
+          "note": "확정"
+        },
+        {
+          "week": 1,
+          "region": "남부",
+          "store": "도동점",
+          "code": "300950",
+          "start": "2026-07-31",
+          "end": "2026-08-03",
+          "note": "확정"
+        }
+      ]
+    }
+  },
+  "dapum": {
+    "items": {
+      "대물": [
+        {
+          "no": 1,
+          "nm": "TV",
+          "models": [
+            "올레드 65\"↑ (25~26년 모델 한정)",
+            "QNED 75\"↑ (25~26년 모델 한정) ※ QNED70BKA 제외"
+          ],
+          "detail": [
+            {
+              "gubun": "QNED 75\"↑",
+              "model": "98QNED89TKA.AKRQ",
+              "note": null
+            },
+            {
+              "gubun": "QNED 75\"↑",
+              "model": "86QNED99TKB.AKRG",
+              "note": null
+            },
+            {
+              "gubun": "QNED 75\"↑",
+              "model": "86QNED91TKA.AKRG",
+              "note": null
+            },
+            {
+              "gubun": "QNED 75\"↑",
+              "model": "86QNED85TKA.AKRG",
+              "note": null
+            },
+            {
+              "gubun": "QNED 75\"↑",
+              "model": "86QNED80TKA.AKRG",
+              "note": null
+            },
+            {
+              "gubun": "QNED 75\"↑",
+              "model": "75QNED99TKB.AKRG",
+              "note": null
+            },
+            {
+              "gubun": "QNED 75\"↑",
+              "model": "75QNED91TKA.AKRG",
+              "note": null
+            },
+            {
+              "gubun": "QNED 75\"↑",
+              "model": "75QNED85TKA.AKRG",
+              "note": null
+            },
+            {
+              "gubun": "QNED 75\"↑",
+              "model": "75QNED80TKA.AKRG",
+              "note": null
+            },
+            {
+              "gubun": "QNED 75\"↑",
+              "model": "75QNED80TMA.AKRG",
+              "note": null
+            },
+            {
+              "gubun": "올레드",
+              "model": "OLED83C4KNA.AKRG",
+              "note": null
+            },
+            {
+              "gubun": "올레드",
+              "model": "OLED65B4NNA.AKRG",
+              "note": null
+            },
+            {
+              "gubun": "올레드",
+              "model": "OLED97G5KNA.AKR",
+              "note": null
+            },
+            {
+              "gubun": "올레드",
+              "model": "OLED83G5KNA.AKRG",
+              "note": null
+            },
+            {
+              "gubun": "올레드",
+              "model": "OLED83C5KNA.AKRG",
+              "note": null
+            },
+            {
+              "gubun": "올레드",
+              "model": "OLED83C5QNA.AKRG",
+              "note": null
+            },
+            {
+              "gubun": "올레드",
+              "model": "OLED83C5FNA.AKRG",
+              "note": null
+            },
+            {
+              "gubun": "올레드",
+              "model": "OLED83B5KNA.AKRG",
+              "note": null
+            },
+            {
+              "gubun": "올레드",
+              "model": "OLED77G5KNA.AKRG",
+              "note": null
+            },
+            {
+              "gubun": "올레드",
+              "model": "OLED77C5FNA.AKRG",
+              "note": null
+            },
+            {
+              "gubun": "올레드",
+              "model": "OLED77B5FNA.AKRG",
+              "note": null
+            },
+            {
+              "gubun": "올레드",
+              "model": "OLED65G5KNA.AKRG",
+              "note": null
+            },
+            {
+              "gubun": "올레드",
+              "model": "OLED65C5FNA.AKRG",
+              "note": null
+            },
+            {
+              "gubun": "올레드",
+              "model": "OLED65B5FNA.AKRG",
+              "note": null
+            },
+            {
+              "gubun": "QNED 75\"↑",
+              "model": "86QNED80AKA.AKRG",
+              "note": null
+            },
+            {
+              "gubun": "QNED 75\"↑",
+              "model": "75QNED80AKA.AKRG",
+              "note": null
+            },
+            {
+              "gubun": "올레드",
+              "model": "OLED65B4MNA.AKRG",
+              "note": null
+            },
+            {
+              "gubun": "올레드",
+              "model": "OLED77C5QNA.AKRG",
+              "note": null
+            },
+            {
+              "gubun": "올레드",
+              "model": "OLED65B4SNA.AKRG",
+              "note": null
+            },
+            {
+              "gubun": "QNED 75\"↑",
+              "model": "86QNED86AKA.AKRG",
+              "note": null
+            },
+            {
+              "gubun": "QNED 75\"↑",
+              "model": "75QNED86AKA.AKRG",
+              "note": null
+            },
+            {
+              "gubun": "QNED 75\"↑",
+              "model": "100QNED86AK.AKRG",
+              "note": null
+            },
+            {
+              "gubun": "QNED 75\"↑",
+              "model": "85QNED92AGA.AKRQ",
+              "note": null
+            },
+            {
+              "gubun": "QNED 75\"↑",
+              "model": "75QNED92AGA.AKRQ",
+              "note": null
+            },
+            {
+              "gubun": "QNED 75\"↑",
+              "model": "75QNED86AGA.AKRG",
+              "note": null
+            },
+            {
+              "gubun": "QNED 75\"↑",
+              "model": "85QNED92AKA.AKRQ",
+              "note": null
+            },
+            {
+              "gubun": "QNED 75\"↑",
+              "model": "75QNED92AKA.AKRQ",
+              "note": null
+            },
+            {
+              "gubun": "QNED 75\"↑",
+              "model": "75QNED82AKA.AKRG",
+              "note": null
+            },
+            {
+              "gubun": "올레드",
+              "model": "OLED65B5BNA.AKRG",
+              "note": null
+            },
+            {
+              "gubun": "QNED 75\"↑",
+              "model": "85QNED93AGA.AKRQ",
+              "note": null
+            },
+            {
+              "gubun": "올레드",
+              "model": "OLED83C6FNA.AKRG",
+              "note": null
+            },
+            {
+              "gubun": "올레드",
+              "model": "OLED77G6KNA.AKRG",
+              "note": null
+            },
+            {
+              "gubun": "올레드",
+              "model": "OLED77C6FNA.AKRG",
+              "note": null
+            },
+            {
+              "gubun": "올레드",
+              "model": "OLED77B6XNA.AKRG",
+              "note": null
+            },
+            {
+              "gubun": "올레드",
+              "model": "OLED65G6KNA.AKRG",
+              "note": null
+            },
+            {
+              "gubun": "올레드",
+              "model": "OLED65C6FNA.AKRG",
+              "note": null
+            },
+            {
+              "gubun": "올레드",
+              "model": "OLED65B6XNA.AKRG",
+              "note": null
+            },
+            {
+              "gubun": "QNED 75\"↑",
+              "model": "100MRGB96BK.AKRG",
+              "note": null
+            },
+            {
+              "gubun": "QNED 75\"↑",
+              "model": "86MRGB96BKA.AKRG",
+              "note": null
+            },
+            {
+              "gubun": "QNED 75\"↑",
+              "model": "86MRGB86BKA.AKRG",
+              "note": null
+            },
+            {
+              "gubun": "QNED 75\"↑",
+              "model": "75MRGB86BKA.AKRG",
+              "note": null
+            },
+            {
+              "gubun": "QNED 75\"↑",
+              "model": "65MRGB86BKA.AKRG",
+              "note": null
+            },
+            {
+              "gubun": "QNED 75\"↑",
+              "model": "100QNED86BK.AKRG",
+              "note": null
+            },
+            {
+              "gubun": "QNED 75\"↑",
+              "model": "85QNED82BKA.AKRG",
+              "note": null
+            },
+            {
+              "gubun": "QNED 75\"↑",
+              "model": "75QNED82BKA.AKRG",
+              "note": null
+            },
+            {
+              "gubun": "올레드",
+              "model": "OLED83B6KNA.AKRG",
+              "note": null
+            },
+            {
+              "gubun": "올레드",
+              "model": "OLED77B6XNA.AKRG",
+              "note": null
+            },
+            {
+              "gubun": "올레드",
+              "model": "OLED65B6XNA.AKRG",
+              "note": null
+            },
+            {
+              "gubun": "QNED 75\"↑",
+              "model": "75MRGB96BKA.AKRG",
+              "note": null
+            },
+            {
+              "gubun": "QNED 75\"↑",
+              "model": "86QNED86BMA.AKRG",
+              "note": null
+            }
+          ]
+        },
+        {
+          "no": 2,
+          "nm": "스탠바이미",
+          "models": [
+            "스탠바이미2 Max 스탠바이미 1,2 &Go"
+          ],
+          "detail": [
+            {
+              "gubun": "스탠바이미",
+              "model": "27ART10CKPL.AKR",
+              "note": null
+            },
+            {
+              "gubun": "스탠바이미",
+              "model": "27ART10AKPL.AKR",
+              "note": null
+            },
+            {
+              "gubun": "스탠바이미GO",
+              "model": "27LX5QKNA.AKR",
+              "note": null
+            },
+            {
+              "gubun": "스탠바이미",
+              "model": "27ART10CMPL.AKR",
+              "note": null
+            },
+            {
+              "gubun": "스탠바이미",
+              "model": "27ART10DSPL.AKR",
+              "note": null
+            },
+            {
+              "gubun": "스탠바이미",
+              "model": "27ART10DQPL.AKR",
+              "note": null
+            },
+            {
+              "gubun": "스탠바이미2",
+              "model": "27LX6TKGA.AKR",
+              "note": null
+            },
+            {
+              "gubun": "스탠바이미2",
+              "model": "27LX6TKGAA.AKR",
+              "note": null
+            },
+            {
+              "gubun": "스탠바이미2",
+              "model": "27LX6TKGAC.AKR",
+              "note": null
+            },
+            {
+              "gubun": "스탠바이미2",
+              "model": "27LX6TEGA.AKR",
+              "note": null
+            },
+            {
+              "gubun": "스탠바이미 Max",
+              "model": "32LX6BKGA.AKR",
+              "note": null
+            },
+            {
+              "gubun": "스탠바이미 Max",
+              "model": "32LX6BEGA.AKR",
+              "note": null
+            },
+            {
+              "gubun": "스탠바이미 Max",
+              "model": "32LX6BPGA.AKR",
+              "note": null
+            }
+          ]
+        },
+        {
+          "no": 3,
+          "nm": "시네빔",
+          "models": [
+            "시네빔 초단초점 ( HU915QE / HU715QW) (PU615U)",
+            "시네빔 큐브 26년형 (PU600U)"
+          ],
+          "detail": [
+            {
+              "gubun": "시네빔",
+              "model": "HU915QE.BKR",
+              "note": null
+            },
+            {
+              "gubun": "시네빔",
+              "model": "HU715QW.BKR",
+              "note": null
+            },
+            {
+              "gubun": "시네빔",
+              "model": "PU615U.BKR",
+              "note": null
+            },
+            {
+              "gubun": "시네빔",
+              "model": "PU600U.BKR",
+              "note": null
+            }
+          ]
+        },
+        {
+          "no": 4,
+          "nm": "오디오",
+          "models": [
+            "S60TR"
+          ],
+          "detail": [
+            {
+              "gubun": "사운드바",
+              "model": "S60TR.AKOR",
+              "note": null
+            }
+          ]
+        },
+        {
+          "no": 5,
+          "nm": "PC",
+          "models": [
+            "26년형 그램14\"~17\" (Z95U/Z90U/ T95TP /Z90TR 한정)"
+          ],
+          "detail": [
+            {
+              "gubun": "26년 그램Pro",
+              "model": "17Z90TR-E.AD7HK",
+              "note": null
+            },
+            {
+              "gubun": "26년 그램Pro",
+              "model": "17Z90TR-E.AA5HK",
+              "note": null
+            },
+            {
+              "gubun": "26년 그램Pro",
+              "model": "16Z90TR-E.AD7HK",
+              "note": null
+            },
+            {
+              "gubun": "26년 그램Pro",
+              "model": "16Z90TR-E.AA5HK",
+              "note": null
+            },
+            {
+              "gubun": "26년 그램Pro",
+              "model": "17Z90U-G.AU70K",
+              "note": null
+            },
+            {
+              "gubun": "26년 그램Pro",
+              "model": "17Z90U-G.AS50K",
+              "note": null
+            },
+            {
+              "gubun": "26년 그램Pro",
+              "model": "16Z90U-K.AU7HK",
+              "note": null
+            },
+            {
+              "gubun": "26년 그램Pro",
+              "model": "16Z90U-K.AU70K",
+              "note": null
+            },
+            {
+              "gubun": "26년 그램Pro",
+              "model": "16Z90U-G.AU70K",
+              "note": null
+            },
+            {
+              "gubun": "26년 그램Pro",
+              "model": "16Z90U-G.AS5MK",
+              "note": null
+            },
+            {
+              "gubun": "26년 그램Pro",
+              "model": "16Z90U-G.AS50K",
+              "note": null
+            },
+            {
+              "gubun": "26년 그램Pro",
+              "model": "16Z95U-G.AU70K",
+              "note": null
+            },
+            {
+              "gubun": "26년 그램Pro",
+              "model": "16Z95U-G.AS5MK",
+              "note": null
+            },
+            {
+              "gubun": "26년 그램Pro",
+              "model": "16Z95U-G.AS50K",
+              "note": null
+            },
+            {
+              "gubun": "26년 그램Pro_360",
+              "model": "16T95TP-K.AA70K",
+              "note": null
+            },
+            {
+              "gubun": "26년 그램Pro_360",
+              "model": "16T95TP-K.AA50K",
+              "note": null
+            },
+            {
+              "gubun": "26년 그램",
+              "model": "15Z90U-G.AS50K",
+              "note": null
+            },
+            {
+              "gubun": "26년 그램",
+              "model": "15Z95U-G.AS50K",
+              "note": null
+            },
+            {
+              "gubun": "26년 그램",
+              "model": "14Z90U-G.AS50K",
+              "note": null
+            },
+            {
+              "gubun": "26년 그램",
+              "model": "14Z95U-G.AS50K",
+              "note": null
+            },
+            {
+              "gubun": "26년 그램",
+              "model": "15Z90U-G.AS5DK",
+              "note": null
+            },
+            {
+              "gubun": "26년 그램",
+              "model": "15Z95U-G.AS5DK",
+              "note": null
+            },
+            {
+              "gubun": "26년 그램",
+              "model": "14Z90U-G.AS5DK",
+              "note": null
+            },
+            {
+              "gubun": "26년 그램",
+              "model": "14Z95U-G.AS5DK",
+              "note": null
+            }
+          ]
+        },
+        {
+          "no": 6,
+          "nm": "모니터",
+          "models": [
+            "게이밍모니터 34/39/45GX900A"
+          ],
+          "detail": [
+            {
+              "gubun": "게이밍 '25년형",
+              "model": "45GX900A.BKR",
+              "note": null
+            },
+            {
+              "gubun": "게이밍 '25년형",
+              "model": "39GX900A.BKR",
+              "note": null
+            },
+            {
+              "gubun": "게이밍 '25년형",
+              "model": "34GX900A.BKR",
+              "note": null
+            }
+          ]
+        },
+        {
+          "no": 7,
+          "nm": "냉장고",
+          "models": [
+            "오브제 무드업",
+            "상냉장 스템 얼음정수/베이직",
+            "-  (Fit & Max 신모델 G646/D646/P616만 적용)",
+            "상냉장 오브제 노크온",
+            "-  (Fit & Max 신모델 G646/D646/P616만 적용)",
+            "상냉장 오브제 더블매직"
+          ],
+          "detail": [
+            {
+              "gubun": "오브제 무드업",
+              "model": "M874GNN3A1.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "오브제 무드업",
+              "model": "M874GNN0A1.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "오브제 무드업",
+              "model": "M624GNN3A2.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "오브제 무드업",
+              "model": "M624GNN0A2.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "오브제 무드업",
+              "model": "M623GNN3A2.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "오브제 무드업",
+              "model": "M623GNN0A2.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "오브제 무드업",
+              "model": "M623GNN392.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "오브제 무드업",
+              "model": "M623GNN092.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "STEM 얼음정수",
+              "model": "W824GBB472.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "STEM 얼음정수",
+              "model": "W824AAA472.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "STEM 얼음정수",
+              "model": "W824GBB172.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "STEM 얼음정수",
+              "model": "W824AAA172.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "STEM 얼음정수",
+              "model": "W825GBB182.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "STEM 얼음정수",
+              "model": "W825AAA182.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "STEM 얼음정수",
+              "model": "W826GBB182.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "STEM 얼음정수",
+              "model": "W826AAA182.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "STEM 얼음정수",
+              "model": "J824MHH112.CKOR",
+              "note": null
+            },
+            {
+              "gubun": "STEM 얼음정수",
+              "model": "J825GBB142.CKOR",
+              "note": null
+            },
+            {
+              "gubun": "STEM 얼음정수",
+              "model": "J816MEE172.CKOR",
+              "note": null
+            },
+            {
+              "gubun": "STEM 얼음정수",
+              "model": "J826GBB142.CKOR",
+              "note": null
+            },
+            {
+              "gubun": "STEM 베이직",
+              "model": "M875GBB472.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "STEM 베이직",
+              "model": "M875GCB472.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "STEM 베이직",
+              "model": "M875AAA472.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "STEM 베이직",
+              "model": "H875GBB442.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "STEM 베이직",
+              "model": "H875GCB442.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "STEM 베이직",
+              "model": "T875MHH141.CKOR",
+              "note": null
+            },
+            {
+              "gubun": "STEM 베이직",
+              "model": "T875MHH042.CKOR",
+              "note": null
+            },
+            {
+              "gubun": "STEM 베이직",
+              "model": "M876GBB472.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "STEM 베이직",
+              "model": "M876GBC472.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "STEM 베이직",
+              "model": "M876AAA472.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "STEM 베이직 노크온",
+              "model": "H876GBB442.CKOR",
+              "note": null
+            },
+            {
+              "gubun": "STEM 베이직",
+              "model": "H876GBB141.CKOR",
+              "note": null
+            },
+            {
+              "gubun": "오브제 노크온",
+              "model": "M874GBB451.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "오브제 노크온",
+              "model": "M874AAA451.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "오브제 노크온",
+              "model": "M874GBB452.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "오브제 노크온",
+              "model": "M874GCB452.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "오브제 노크온",
+              "model": "M874AAA452.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "오브제 노크온",
+              "model": "M876GBB431.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "오브제 노크온",
+              "model": "M876GQQ431.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "오브제 노크온",
+              "model": "M876GGA431.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "오브제 노크온(DI)",
+              "model": "T875MHR312.CKOR",
+              "note": null
+            },
+            {
+              "gubun": "오브제 노크온(DI)",
+              "model": "T875MEE412.CKOR",
+              "note": null
+            },
+            {
+              "gubun": "오브제 노크온(DI)",
+              "model": "T875MEE312.CKOR",
+              "note": null
+            },
+            {
+              "gubun": "오브제 노크온(DI)",
+              "model": "T875MRH412.CKOR",
+              "note": null
+            },
+            {
+              "gubun": "오브제 더블매직",
+              "model": "M874GBB252.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "오브제 더블매직",
+              "model": "M874AAA252.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "오브제 더블매직",
+              "model": "M875GBB232.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "오브제 더블매직",
+              "model": "M875GCB232.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "오브제 더블매직",
+              "model": "M875AAA232.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "오브제 더블매직",
+              "model": "M876GBB232.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "오브제 더블매직",
+              "model": "M876GBC232.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "오브제 더블매직",
+              "model": "M876AAA232.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "오브제 빌트인/STEM베이직",
+              "model": "M625AAA052.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "오브제 빌트인/STEM베이직",
+              "model": "M625GBB0522.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "오브제 빌트인/STEM베이직",
+              "model": "M626GBB052.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "오브제 빌트인/STEM베이직",
+              "model": "M626AAA052.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "오브제 빌트인/STEM베이직",
+              "model": "M626GBB352.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "오브제 빌트인/STEM베이직",
+              "model": "M626AAA352.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "오브제 빌트인/STEM베이직",
+              "model": "G646GBB081.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "오브제 빌트인/노크온",
+              "model": "G646GBB341.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "오브제 빌트인 드로어/STEM",
+              "model": "D646GBB091.CKOR",
+              "note": null
+            },
+            {
+              "gubun": "오브제 빌트인 드로어/STEM베이직",
+              "model": "D646GBB081.CKOR",
+              "note": null
+            },
+            {
+              "gubun": "오브제 빌트인/STEM베이직",
+              "model": "G646GQQ081.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "오브제 빌트인/STEM베이직",
+              "model": "G646GGG341.AKOR",
+              "note": null
+            }
+          ]
+        },
+        {
+          "no": 8,
+          "nm": "김치냉장고",
+          "models": [
+            "오브제 무드업",
+            "491ℓ, 402ℓ, Fit & Max 신모델(Z386)"
+          ],
+          "detail": [
+            {
+              "gubun": "오브제 400",
+              "model": "Z493MEEF32.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "오브제 무드업",
+              "model": "Z331GNN153.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "오브제 무드업",
+              "model": "Z331GNN152.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "오브제 400",
+              "model": "Z499MEEF11.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "오브제 400(신모델)",
+              "model": "Z495GBB251.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "오브제 400(신모델)",
+              "model": "Z495GQQ251.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "오브제 400(신모델)",
+              "model": "Z495GGA251.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "오브제 400(신모델)",
+              "model": "Z495MQQ251.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "오브제 400(신모델)",
+              "model": "Z495GQG212.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "오브제 400(신모델)",
+              "model": "Z490MQQF11.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "오브제 400(신모델)",
+              "model": "Z490MEEF12.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "오브제 400(신모델)",
+              "model": "Z495GBB212.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "오브제 400(신모델)",
+              "model": "Z490MEEF11.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "FIT&MAX 신모델",
+              "model": "Z386GBB241.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "FIT&MAX 신모델",
+              "model": "Z386GQQ241.AKOR",
+              "note": null
+            }
+          ]
+        },
+        {
+          "no": 9,
+          "nm": "모던엣지",
+          "models": [
+            "모던엣지 상냉장 (Q342***153)"
+          ],
+          "detail": [
+            {
+              "gubun": "모던엣지 상냉장",
+              "model": "Q342AAA153.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "모던엣지 상냉장",
+              "model": "Q342GBB153.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "모던엣지 상냉장",
+              "model": "Q342GPP153S.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "모던엣지 상냉장",
+              "model": "Q342GPB153S.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "모던엣지 상냉장",
+              "model": "Q342GPC153S.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "모던엣지 상냉장",
+              "model": "Q342GCC153S.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "모던엣지 상냉장",
+              "model": "Q342GCB153S.AKOR",
+              "note": null
+            }
+          ]
+        },
+        {
+          "no": 10,
+          "nm": "와인셀러",
+          "models": [
+            "오브제 스탠드 (40병↑신모델)"
+          ],
+          "detail": [
+            {
+              "gubun": "오브제 스탠드",
+              "model": "W0812GG.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "오브제 스탠드",
+              "model": "W1212GB.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "오브제 스탠드",
+              "model": "W0492GG.AKOR",
+              "note": null
+            }
+          ]
+        },
+        {
+          "no": 11,
+          "nm": "식기세척기",
+          "models": [
+            "14/12인용 열풍건조 (3/17부터 열풍건조 外 제외)"
+          ],
+          "detail": [
+            {
+              "gubun": "스팀/열풍건조",
+              "model": "DEE6EWE.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "스팀/열풍건조",
+              "model": "DEE6BGE.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "스팀/열풍건조",
+              "model": "DUE6BGHE.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "스팀/열풍건조",
+              "model": "DUE6GLHE.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "스팀/열풍건조",
+              "model": "DFE6BGHE.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "스팀/열풍건조",
+              "model": "DUE6BGH1E.AKOR",
+              "note": null
+            }
+          ]
+        },
+        {
+          "no": 12,
+          "nm": "전기레인지",
+          "models": [
+            "3구 (BEF/I3AM*, BEF/I3AN*, BEF/I3AS*, BEY3*)"
+          ],
+          "detail": [
+            {
+              "gubun": "3구 인덕션",
+              "model": "BEI3AMB4E.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "3구 인덕션",
+              "model": "BEI3ASMLE.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "3구 인덕션",
+              "model": "BEI3ANHLE.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "3구 인덕션",
+              "model": "BEI3ANBLE.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "3구 인덕션",
+              "model": "BEI3ANPLE.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "3구 인덕션",
+              "model": "BEF3ANBLE.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "3구 인덕션",
+              "model": "BEF3ANPLE.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "3구 인덕션",
+              "model": "BEF3ANSLE.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "3구 인덕션",
+              "model": "BEI3ASB4E.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "3구 인덕션",
+              "model": "BEF3ASMLE.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "3구 인덕션",
+              "model": "BEI3ASS4E.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "3구 인덕션",
+              "model": "BEF3ANHLE.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "3구 하이브리드",
+              "model": "BEY3GS2E.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "3구 하이브리드",
+              "model": "BEY3MSE.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "3구 인덕션",
+              "model": "BEI3AMB4.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "3구 인덕션",
+              "model": "BEI3ANBL.AKOR1",
+              "note": null
+            },
+            {
+              "gubun": "3구 인덕션",
+              "model": "BEI3ANHL.AKOR1",
+              "note": null
+            }
+          ]
+        },
+        {
+          "no": 13,
+          "nm": "광파오븐",
+          "models": [
+            "에센스 오브제 MLJ32***  (39L & ML32*** 제외)"
+          ],
+          "detail": [
+            {
+              "gubun": "오브제 광파",
+              "model": "MLJ32ERS.CKOR",
+              "note": null
+            },
+            {
+              "gubun": "오브제 광파",
+              "model": "MLJ32HRS.CKOR",
+              "note": null
+            },
+            {
+              "gubun": "오브제 광파",
+              "model": "MLJ32PRS.CKOR",
+              "note": null
+            },
+            {
+              "gubun": "오브제 광파",
+              "model": "MLJ32MRS.CKOR",
+              "note": null
+            }
+          ]
+        },
+        {
+          "no": 14,
+          "nm": "정수기",
+          "models": [
+            "음성/맞춤 -음성인식 -맞춤출수"
+          ],
+          "detail": [
+            {
+              "gubun": "듀얼",
+              "model": "WU923AS.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "듀얼",
+              "model": "WU823AS.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "듀얼",
+              "model": "WU923AWB.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "듀얼",
+              "model": "WU923ANB.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "듀얼",
+              "model": "WU923ACB.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "듀얼",
+              "model": "WU923ABB.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "맞춤출수",
+              "model": "WD523ACB.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "맞춤출수",
+              "model": "WD523AMB.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "맞춤출수",
+              "model": "WD523APB.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "맞춤출수",
+              "model": "WD523AWB.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "맞춤출수",
+              "model": "WD523ARB.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "음석인식O",
+              "model": "WD524ACB.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "음석인식O",
+              "model": "WD524AWB.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "맞춤출수",
+              "model": "WD523VC.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "맞춤출수",
+              "model": "WD523VH.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "음석인식O",
+              "model": "WD524VC.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "음석인식O",
+              "model": "WD524VH.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "음석인식O",
+              "model": "WD524VS.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "맞춤출수",
+              "model": "WD523VS.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "맞춤출수",
+              "model": "WD523VP.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "맞춤출수",
+              "model": "WD523VM.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "음석인식O",
+              "model": "WD524VS.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "맞춤출수",
+              "model": "WD523VS.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "맞춤출수",
+              "model": "WD523VP.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "맞춤출수",
+              "model": "WD523VM.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "얼음정수기",
+              "model": "WD721RE.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "얼음정수기",
+              "model": "WD722RK.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "얼음정수기",
+              "model": "WD722RH.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "얼음정수기",
+              "model": "WD722RE.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "음석인식O",
+              "model": "WD524VC.AKOR1",
+              "note": null
+            },
+            {
+              "gubun": "음석인식O",
+              "model": "WD524VH.AKOR1",
+              "note": null
+            },
+            {
+              "gubun": "맞춤출수",
+              "model": "WD523VCT.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "맞춤출수",
+              "model": "WD523VHT.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "맞춤출수",
+              "model": "WD523VST.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "맞춤출수",
+              "model": "WD523VMT.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "맞춤출수",
+              "model": "WD523VPT.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "음석인식O",
+              "model": "WD524VCT.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "음석인식O",
+              "model": "WD524VHT.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "음석인식O",
+              "model": "WD524VST.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "얼음(라이트)",
+              "model": "WD723RK.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "얼음(라이트)",
+              "model": "WD723RE.AKOR",
+              "note": null
+            }
+          ]
+        },
+        {
+          "no": 15,
+          "nm": "세탁기",
+          "models": [
+            "워시타워 25/25KG 25/22KG 23/23KG 25/20KG",
+            "* 트롬 25kg ↑",
+            "건조기 25kg ↑",
+            "워시콤보",
+            "건조기 21~25kg"
+          ],
+          "detail": [
+            {
+              "gubun": "AI 워시타워",
+              "model": "WA2525EGHF.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "AI 워시타워",
+              "model": "WA2525GEHF.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "AI 워시타워",
+              "model": "WA2525IIHF.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "AI 워시타워",
+              "model": "WA2525KDF.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "AI 워시타워",
+              "model": "WA2525GGHF.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "AI 워시타워",
+              "model": "WA2525EEHF.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "AI 워시타워",
+              "model": "WA2525MYHF.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "AI 워시타워",
+              "model": "WA2525YMHF.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "AI 워시타워",
+              "model": "WA2525MMHF.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "AI 워시타워",
+              "model": "WA2525YYHF.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "워시타워",
+              "model": "W2520WHM.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "워시타워",
+              "model": "WL22GEHU.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "워시콤보",
+              "model": "FC2521SX6C.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "워시콤보",
+              "model": "FH25EA.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "워시콤보",
+              "model": "FH25GA.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "워시콤보",
+              "model": "FH25ES.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "워시콤보",
+              "model": "FH25GS.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "워시콤보",
+              "model": "FH24WN.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "트롬 25Kg",
+              "model": "FX25GSR.AKOR2",
+              "note": null
+            },
+            {
+              "gubun": "트롬 25Kg",
+              "model": "FX25ESR.AKOR2",
+              "note": null
+            },
+            {
+              "gubun": "트롬 25Kg",
+              "model": "FX25KSR.AKOR2",
+              "note": null
+            },
+            {
+              "gubun": "트롬 25Kg",
+              "model": "FX25VSR.AKOR2",
+              "note": null
+            },
+            {
+              "gubun": "트롬 25Kg",
+              "model": "FX25WSR.AKOR2",
+              "note": null
+            },
+            {
+              "gubun": "트롬 25Kg",
+              "model": "FX25GSR.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "트롬 25Kg",
+              "model": "FX25ESR.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "트롬 25Kg",
+              "model": "FX25KSR.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "트롬 25Kg",
+              "model": "FX25VSR.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "트롬 25Kg",
+              "model": "FX25WSR.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "트롬 25Kg",
+              "model": "FX25GAR.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "트롬 25Kg",
+              "model": "FX25EAR.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "트롬 25Kg",
+              "model": "FX25GS.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "트롬 25Kg",
+              "model": "FX25ES.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "트롬 25Kg",
+              "model": "FX25KSQ.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "트롬 25Kg",
+              "model": "FX25VSQ.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "트롬 25Kg",
+              "model": "FX25WSQ.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "트롬 25Kg",
+              "model": "FX25KS.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "트롬 25Kg",
+              "model": "FX25WS.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "트롬 25Kg",
+              "model": "FX25VS.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "트롬 25Kg",
+              "model": "FX25GAR.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "트롬 25Kg",
+              "model": "FX25ENR.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "트롬 25Kg",
+              "model": "FX25EF.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "트롬 25Kg",
+              "model": "FX25GF.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "트롬 25Kg",
+              "model": "FX25KF.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "트롬 25Kg",
+              "model": "FX25VF.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "트롬 25Kg",
+              "model": "FX25IF.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "건조기 25Kg",
+              "model": "RD25ES.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "건조기 25Kg",
+              "model": "RD25GS.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "건조기 25Kg",
+              "model": "RD25KS.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "건조기 25Kg",
+              "model": "RD25VS.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "건조기 25Kg",
+              "model": "RD25IS.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "건조기 21Kg",
+              "model": "RD21EN.AKOR",
+              "note": null
+            }
+          ]
+        },
+        {
+          "no": 16,
+          "nm": "A9",
+          "models": [
+            "`25년/26년 A9AI (AI9***)",
+            "`25년/26년 A7 (A7**)",
+            "`25년/26년 A5"
+          ],
+          "detail": [
+            {
+              "gubun": "A5",
+              "model": "AS520WA.CKOR",
+              "note": null
+            },
+            {
+              "gubun": "스팀",
+              "model": "AI948WA.BKOR",
+              "note": null
+            },
+            {
+              "gubun": "A5",
+              "model": "AS527HA.CKOR",
+              "note": null
+            },
+            {
+              "gubun": "A7",
+              "model": "A720WA.CKOR",
+              "note": null
+            },
+            {
+              "gubun": "A9",
+              "model": "AI927BA.BKOR",
+              "note": null
+            }
+          ]
+        },
+        {
+          "no": 17,
+          "nm": "로봇청소기",
+          "models": [
+            "로보킹 AI 올인원"
+          ],
+          "detail": [
+            {
+              "gubun": "로보킹AI올인원",
+              "model": "B95AWBTH.CKOR",
+              "note": null
+            },
+            {
+              "gubun": "로보킹AI올인원",
+              "model": "B95AWBH.CKOR",
+              "note": null
+            },
+            {
+              "gubun": "로보킹AI올인원",
+              "model": "B95AWDTH.CKOR",
+              "note": null
+            },
+            {
+              "gubun": "로보킹AI올인원",
+              "model": "B95AWBH.CKOR1",
+              "note": null
+            },
+            {
+              "gubun": "로보킹AI올인원",
+              "model": "B95AWBTH.CKOR1",
+              "note": null
+            }
+          ]
+        },
+        {
+          "no": 18,
+          "nm": "스타일러",
+          "models": [
+            "5벌 전 모델 ('25년 및 '26년 新 모델 限) * SC5MHR60(S)포함",
+            "3벌 전 모델 ('26년 新 모델 限)"
+          ],
+          "detail": [
+            {
+              "gubun": "오브제 5벌_'25년",
+              "model": "SC5GMR81A.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "오브제 5벌_'25년",
+              "model": "SC5MBR8RA.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "오브제 5벌_'25년",
+              "model": "SC5MBR71.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "오브제 5벌_'25년",
+              "model": "SC5GMR61B.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "오브제 5벌_'25년",
+              "model": "SC5MBR61B.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "오브제 5벌_'25년",
+              "model": "SC5MSR41.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "오브제 5벌_'26년",
+              "model": "SC5GMR81S.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "오브제 5벌_'26년",
+              "model": "SC5MBR81S.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "오브제 5벌_'26년",
+              "model": "SC5MBR71S.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "오브제 5벌_'26년",
+              "model": "SC5GMR61S.BKOR",
+              "note": null
+            },
+            {
+              "gubun": "오브제 5벌_'26년",
+              "model": "SC5MBR61S.BKOR",
+              "note": null
+            },
+            {
+              "gubun": "오브제 5벌_'26년",
+              "model": "SC5MSR41S.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "오브제 3벌_'26년",
+              "model": "SC3GME51.BKOR",
+              "note": null
+            },
+            {
+              "gubun": "오브제 3벌_'26년",
+              "model": "SC3RBE51.BKOR",
+              "note": null
+            },
+            {
+              "gubun": "오브제 5벌_'25년",
+              "model": "SC5GMR70.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "오브제 5벌_'25년",
+              "model": "SC5MHR60.AKOR",
+              "note": null
+            }
+          ]
+        },
+        {
+          "no": 19,
+          "nm": "슈케어",
+          "models": [
+            "슈케어"
+          ],
+          "detail": [
+            {
+              "gubun": "슈케어",
+              "model": "SS4RHS60E.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "슈케어",
+              "model": "SS4RYS60E.AKOR",
+              "note": null
+            }
+          ]
+        },
+        {
+          "no": 20,
+          "nm": "에어컨",
+          "models": [
+            "25년, 26년형 타워1, 뷰1 프로, 뷰1",
+            "쿨 프로 제외 아트쿨 (싱글벽걸이)",
+            "*신모델 출시시 동일 적용 (뷰2 적용)"
+          ],
+          "detail": [
+            {
+              "gubun": "아트쿨",
+              "model": "SQ07EDETHS.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "아트쿨",
+              "model": "SQ07EDETHS1.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "아트쿨",
+              "model": "SQ07EDETHS2.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "타워1",
+              "model": "FQ25EN9BRN.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "타워1",
+              "model": "FQ18FN5BAN.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "타워1",
+              "model": "FQ18FN5HAN.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "타워1",
+              "model": "FQ18FN7BAN.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "타워1",
+              "model": "FQ18FN7HAN.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "타워1",
+              "model": "FQ18FN9BAN.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "타워1",
+              "model": "FQ18FN9BEN.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "타워1",
+              "model": "FQ18FN9HAN.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "타워1",
+              "model": "FQ18FN9HEN.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "휘센뷰프로",
+              "model": "FQ18FV4EBN.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "휘센뷰프로",
+              "model": "FQ18FV4ETN.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "휘센뷰프로",
+              "model": "FQ18FV6EBN.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "휘센뷰프로",
+              "model": "FQ18FV6EEN.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "휘센뷰프로",
+              "model": "FQ18FV6EFN.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "휘센뷰프로",
+              "model": "FQ18FV6ETN.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "휘센뷰프로",
+              "model": "FQ22FN9BEN.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "휘센뷰프로",
+              "model": "FQ22FN9HEN.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "휘센뷰프로",
+              "model": "FQ22FV6EAN.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "휘센뷰프로",
+              "model": "FQ22FV6ESN.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "휘센뷰프로",
+              "model": "FQ25FN9BEN.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "휘센뷰프로",
+              "model": "FQ25FN9HEN.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "휘센뷰2(신)",
+              "model": "FQ18FU1BBN.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "휘센뷰2(신)",
+              "model": "FQ18FU2BBN.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "휘센뷰1(신)",
+              "model": "FQ18FV3EBN.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "휘센뷰1(신)",
+              "model": "FQ22FV3EBN.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "휘센뷰1(낸난방)",
+              "model": "FW18EV3EAN.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "휘센뷰1(신)_공용",
+              "model": "FQ22FV3EAN.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "휘센뷰2(신)",
+              "model": "FQ22FU2EAN.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "휘센타워2(사계절)",
+              "model": "FW19SETBAN.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "타워(일반형조합내기)_구독",
+              "model": "FQ18FN5BUN.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "타워(일반형조합내기)_구독",
+              "model": "FQ18FN5HUN.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "뷰1등급_구독",
+              "model": "FQ18FV3EEN.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "뷰2",
+              "model": "FQ18EU1EAN.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "타워1",
+              "model": "FQ25GN9BEN.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "타워1",
+              "model": "FQ25GN9HEN.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "타워1",
+              "model": "FQ22GN9BEN.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "타워1",
+              "model": "FQ22GN9HEN.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "타워1",
+              "model": "FQ18GN9BEN.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "타워1",
+              "model": "FQ18GN9HEN.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "타워1",
+              "model": "FQ18GN9BAN.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "타워1",
+              "model": "FQ18GN9HAN.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "타워1",
+              "model": "FQ18GN7BAN.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "타워1",
+              "model": "FQ18GN7HAN.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "타워1",
+              "model": "FQ18GN5BAN.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "타워1",
+              "model": "FQ18GN5HAN.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "타워1",
+              "model": "FQ25FN5BAN.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "타워1",
+              "model": "FQ25FN5HAN.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "뷰1프로",
+              "model": "FQ18GV6EEN.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "뷰1프로",
+              "model": "FQ22GV6EAN.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "뷰1프로",
+              "model": "FQ18GV6EAN.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "뷰1프로",
+              "model": "FQ18GV6BAN.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "뷰1프로",
+              "model": "FQ18GV5EAN.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "뷰1프로",
+              "model": "FQ18GV5BAN.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "뷰14S",
+              "model": "FQ18GV4EBN.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "뷰13S",
+              "model": "FQ18GV3EEN.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "뷰13S",
+              "model": "FQ22GV3EAN.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "뷰13S",
+              "model": "FQ18GV3EBN.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "뷰13S",
+              "model": "FQ18GV3BBN.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "뷰22S",
+              "model": "FQ22GU2EAN.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "뷰22S",
+              "model": "FQ18GU2BBN.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "뷰21S",
+              "model": "FQ18GU1BBN.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "타워1(기획)",
+              "model": "FQ25GN9BKN.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "타워1(기획)",
+              "model": "FQ18GN7BKN.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "쿨4s",
+              "model": "FQ18GC4EBN.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "쿨3s",
+              "model": "FQ18GC3EBN.AKOR",
+              "note": null
+            }
+          ]
+        },
+        {
+          "no": 21,
+          "nm": "360공청기",
+          "models": [
+            "360 알파(Ai) 2단 25년, 26년형 (AS355* / AS356*)"
+          ],
+          "detail": [
+            {
+              "gubun": "360 알파 혼매전용",
+              "model": "AS355NSAH.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "360 AI",
+              "model": "AS355NSNA.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "360 AI",
+              "model": "AS355NGNA.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "360 2단 오브제",
+              "model": "AS356NGMA.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "360 2단 오브제",
+              "model": "AS356NSHH.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "360 2단 오브제",
+              "model": "AS356NSMA.AKOR",
+              "note": null
+            }
+          ]
+        },
+        {
+          "no": 22,
+          "nm": "타워시리즈",
+          "models": [
+            "에어로타워 25년 형 (FS065*)",
+            "하이드로타워 (HY705* HY704*)",
+            "에어로캣타워, 스피커 - AS065C*, AS065S*"
+          ],
+          "detail": [
+            {
+              "gubun": "하이드로타워",
+              "model": "HY704RGUA.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "하이드로타워",
+              "model": "HY704RSUA.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "하이드로타워",
+              "model": "HY704RGUA.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "하이드로타워(구독만운영)",
+              "model": "HY705RSUA.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "에어로타워",
+              "model": "FS065PSKA.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "에어로캣타워",
+              "model": "AS065CWHA.AKOR",
+              "note": null
+            }
+          ]
+        },
+        {
+          "no": 23,
+          "nm": "바스에어시스템",
+          "models": [
+            "전모델"
+          ],
+          "detail": [
+            {
+              "gubun": "바스에어시스템",
+              "model": "M-X0120BASV.ASM",
+              "note": null
+            },
+            {
+              "gubun": "바스에어시스템",
+              "model": "M-X0120BASA.ASM",
+              "note": null
+            }
+          ]
+        }
+      ],
+      "소물": [
+        {
+          "no": 1,
+          "nm": "모니터",
+          "models": [
+            "스마트모니터 - 32SR50F, 27U511SAW",
+            "게이밍 모니터 - 32/27GS75Q, 27GS60F, 24GS65F",
+            "PC모니터 - 32UR550K, 32/27U631A, 24/27BA400"
+          ],
+          "detail": [
+            {
+              "gubun": "스마트모니터",
+              "model": "32SR50F.BKR",
+              "note": null
+            },
+            {
+              "gubun": "스마트모니터",
+              "model": "27U511SAW.BKR",
+              "note": null
+            },
+            {
+              "gubun": "게이밍 모니터",
+              "model": "32GS75Q.BKR",
+              "note": null
+            },
+            {
+              "gubun": "게이밍 모니터",
+              "model": "27GS75Q.BKR",
+              "note": null
+            },
+            {
+              "gubun": "게이밍 모니터",
+              "model": "27GS60F.BKR",
+              "note": null
+            },
+            {
+              "gubun": "PC모니터",
+              "model": "32U631A.BKR",
+              "note": null
+            },
+            {
+              "gubun": "PC모니터",
+              "model": "27U631A.BKR",
+              "note": null
+            },
+            {
+              "gubun": "PC모니터",
+              "model": "24BA400.BKR",
+              "note": null
+            },
+            {
+              "gubun": "PC모니터",
+              "model": "27BA400.BKR",
+              "note": null
+            },
+            {
+              "gubun": "PC모니터",
+              "model": "32UR550K.BKR",
+              "note": null
+            }
+          ]
+        },
+        {
+          "no": 2,
+          "nm": "PC",
+          "models": [
+            "990그램 전모델",
+            "그램14\"~17\" (Z90S/T, Z80T 한정)",
+            "그램프로17\"~16\" (Z90SP/TP/TS/TL 한정)",
+            "그램 360 (T90SP/TP 한정)"
+          ],
+          "detail": [
+            {
+              "gubun": "그램 14~17(S/T모델)",
+              "model": "17Z90S-G.AA5DK",
+              "note": null
+            },
+            {
+              "gubun": "그램 14~17(S/T모델)",
+              "model": "16Z90S-G.AA5DK",
+              "note": null
+            },
+            {
+              "gubun": "그램 14~17(S/T모델)",
+              "model": "15Z90T-G.AA50K",
+              "note": null
+            },
+            {
+              "gubun": "그램 14~17(S/T모델)",
+              "model": "14Z90T-G.AA50K",
+              "note": null
+            },
+            {
+              "gubun": "그램Pro(16~17)",
+              "model": "17Z90TR-S.AD7HK",
+              "note": null
+            },
+            {
+              "gubun": "그램Pro(16~17)",
+              "model": "16Z90TR-S.AD70K",
+              "note": null
+            },
+            {
+              "gubun": "그램Pro(16~17)",
+              "model": "17Z90SP-G.AA50K",
+              "note": null
+            },
+            {
+              "gubun": "그램Pro(16~17)",
+              "model": "16Z90SP-G.AA50K",
+              "note": null
+            },
+            {
+              "gubun": "그램Pro(16~17)",
+              "model": "17Z90TP-G.AD70K",
+              "note": null
+            },
+            {
+              "gubun": "그램Pro(16~17)",
+              "model": "17Z90TP-G.AA50K",
+              "note": null
+            },
+            {
+              "gubun": "그램Pro(16~17)",
+              "model": "17Z90TP-G.AA5MK",
+              "note": null
+            },
+            {
+              "gubun": "그램Pro(16~17)",
+              "model": "16Z90TP-G.AD70K",
+              "note": null
+            },
+            {
+              "gubun": "그램Pro(16~17)",
+              "model": "16Z90TP-G.AA50K",
+              "note": null
+            },
+            {
+              "gubun": "그램Pro(16~17)",
+              "model": "16Z90TP-G.AA5MK",
+              "note": null
+            },
+            {
+              "gubun": "그램Pro(16~17)",
+              "model": "16Z90TS-G.AS50K",
+              "note": null
+            },
+            {
+              "gubun": "그램360",
+              "model": "16T90TP-G.AD70K",
+              "note": null
+            },
+            {
+              "gubun": "그램360",
+              "model": "16T90TP-G.AA50K",
+              "note": null
+            },
+            {
+              "gubun": "그램360",
+              "model": "16Z90TS-G.AS50K",
+              "note": null
+            },
+            {
+              "gubun": "AMD그램",
+              "model": "15Z80T-G.AS50K",
+              "note": null
+            },
+            {
+              "gubun": "그램_기획모델",
+              "model": "17Z90T-G.AA5DK",
+              "note": null
+            },
+            {
+              "gubun": "그램_기획모델",
+              "model": "16Z90T-G.AA5DK",
+              "note": null
+            }
+          ]
+        },
+        {
+          "no": 3,
+          "nm": "와인셀러",
+          "models": [
+            "오브제 미니 (W0082GBE/GPE)"
+          ],
+          "detail": [
+            {
+              "gubun": "오브제 미니",
+              "model": "W0082GBE.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "오브제 미니",
+              "model": "W0082GPE.AKOR",
+              "note": null
+            }
+          ]
+        },
+        {
+          "no": 4,
+          "nm": "식기세척기",
+          "models": [
+            "6인용 (DTC2NE)"
+          ],
+          "detail": [
+            {
+              "gubun": "6인용",
+              "model": "DTC2NE.AKOR",
+              "note": null
+            }
+          ]
+        },
+        {
+          "no": 5,
+          "nm": "에어컨",
+          "models": [
+            "창호형 / 이동식"
+          ],
+          "detail": [
+            {
+              "gubun": "창호형 에어컨",
+              "model": "WQ06DCBAN.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "창호형 에어컨",
+              "model": "WQ06DCWBN.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "이동식 에어컨",
+              "model": "PQ08DCWBN.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "이동식 에어컨",
+              "model": "PQ08DDWBN.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "이동식 에어컨",
+              "model": "PQ08DDBAN.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "창호형 에어컨",
+              "model": "WQ06DDBAN.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "창호형 에어컨",
+              "model": "WQ06DDWBN.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "창호형 에어컨",
+              "model": "WQ06EEWBN.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "이동식 에어컨",
+              "model": "PQ08EDWBN.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "창호형 에어컨",
+              "model": "WQ06FEWBN.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "이동식 에어컨",
+              "model": "PQ08FDBAN.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "이동식 에어컨",
+              "model": "PQ08FDWAN.AKOR",
+              "note": null
+            }
+          ]
+        },
+        {
+          "no": 6,
+          "nm": "에어케어",
+          "models": [
+            "'360알파 1단 (AS205*, AS206*)",
+            "에어로퍼니쳐 25년형 (AS065P*)",
+            "월핏 1팬(AS185LGAA*)",
+            "제습기 *DQ235*, DQ185*",
+            "하이드로에센셜 HY505*"
+          ],
+          "detail": [
+            {
+              "gubun": "에어로퍼니처",
+              "model": "AS065PWHA.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "제습기",
+              "model": "DQ205PSVA.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "제습기",
+              "model": "DQ235MWGA.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "제습기",
+              "model": "DQ185MWGA.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "제습기",
+              "model": "DQ185MEGA.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "하이드로에센셜",
+              "model": "HY505RWLAH.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "하이드로에센셜",
+              "model": "HY505RWLAHM.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "360알파 1단",
+              "model": "AS205NGJA.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "360알파 1단",
+              "model": "AS205NSJA.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "360알파 1단",
+              "model": "AS206NGHA.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "360알파 1단",
+              "model": "AS206NSHA.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "월핏",
+              "model": "AS185LGAA.AKOR",
+              "note": null
+            },
+            {
+              "gubun": "제습기",
+              "model": "DQ256MWGA.AKOR",
+              "note": null
+            }
+          ]
+        }
+      ]
+    },
+    "periods": [
+      {
+        "ver": "v1",
+        "label": "7/1~8/3일",
+        "qty": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ],
+        "per": [
+          "5만",
+          "10만",
+          "10만",
+          "10만",
+          "15만",
+          "15만",
+          "15만",
+          "20만",
+          "20만",
+          "20만",
+          "25만",
+          "25만",
+          "25만",
+          "25만",
+          "25만"
+        ],
+        "sum": [
+          10,
+          30,
+          40,
+          50,
+          90,
+          105,
+          120,
+          180,
+          200,
+          220,
+          300,
+          325,
+          350,
+          375,
+          400
+        ]
+      }
+    ],
+    "written": "26/7/13(월)",
+    "latestVer": "v1",
+    "modeldiff": {},
+    "ganSame": true,
+    "month": 8,
+    "changeLines": [
+      {
+        "ver": "v1",
+        "text": "<b style='color:var(--lg-red)'>8/4일부 대물구간 혜택 변경 확정</b> (구간강화 종료) · 7월 v2 조건 8/3일 연장 지속"
+      }
+    ],
+    "monthdiff": {},
+    "prevMonth": "2026-07"
+  },
+  "ss": {
+    "month": 8,
+    "smart": null
+  },
+  "lo": {
+    "common": {
+      "note100": "※ 랜드온리 판촉금액은 캐시백 100%로 지급",
+      "periodNote_sub": "ex. 행사 종료 후 품목 추가 적용 불가",
+      "itemCond": "행사모델 中 2품목 이상 구매 (대형가전 中 1품목 포함 필수)",
+      "itemCond2": "동일품목 모델 2개 구매 시 적용불가 (예: TV 2대 → 1대 적용)",
+      "itemCondExtra_lg": [
+        "· 세탁/건조기(복합형) 단품 판매 시 랜드온리 미지급 (1품목으로 취급)",
+        "· 에어컨 멀티만 랜드온리 지급 (일반배관, 매립배관 동일)",
+        "· 세탁/건조기(복합형) + 세탁/건조기(단품) 구매 시 2품목 기준 적용"
+      ],
+      "itemCondExtra_ss": [
+        "· 세탁+건조 SET모델은 2품목으로 인정 (예: WF2522HDBBA = 2품목)"
+      ],
+      "abuse": [
+        "행사기간 內 판매 및 인도조건 內 배송 완료건 한정 지급",
+        "전표당 인수자 1명까지만 인정 (우편번호 기준)",
+        "구독 판매건 출하가 적용 (전자랜드 전산 기준)",
+        "동일 고객번호 지급제외 (3개월 내 다품목성 수혜 고객번호)",
+        "특판성 의심 전표 지급제외 (정도경영그룹 협조)"
+      ],
+      "payNote": "① 전표 內 대상모델 \"전체\" 인도완료 기준, 그 익월 반영됩니다.\n② 전표 內 잔여 미인도 모델이 최종 지급종료月까지 남아있는 경우, 인도조건 마지막月 기준 인도완료된 모델의 캐시백만 최종 지급됩니다.",
+      "ssNoRetro": "※ 삼성) 캐시백 소급요청 사유 불문 일절 불가합니다.",
+      "dvmNote": "※ DVM-HOME 품목은 당사 삼성 및 물류배송 모델까지 포함 (거래선코드 1000001 한정)",
+      "abuse_lg": [
+        "행사기간 內 판매 및 인도조건 內 배송 완료건 한정 지급",
+        "전표당 인수자 1명까지만 인정 (우편번호 기준)",
+        "구독 판매건 출하가 적용 (전자랜드 전산 기준)",
+        "동일 고객번호 지급제외 (3개월 내 다품목성 수혜 고객번호)",
+        "특판성 의심 전표 지급제외 (정도경영그룹 협조)"
+      ],
+      "abuse_ss": [
+        "행사기간 內 판매 및 인도조건 內 배송 완료건 한정 지급",
+        "전표당 인수자 1명까지만 인정 (우편번호 기준)",
+        "구독 판매건은 금액합산 제외",
+        "동일 고객번호 지급제외 (3개월 내 다품목성 수혜 고객번호)",
+        "특판성 의심 전표 지급제외 (정도경영그룹 협조)"
+      ]
+    },
+    "weeks": {
+      "1": {
+        "label": "1주차",
+        "period": "26.7.31(금)~26.8.3(월),4일간",
+        "range": "7/31~8/3",
+        "scope": "all",
+        "brands": {
+          "ss": {
+            "name": "삼성",
+            "cards": {
+              "label": "5대 카드",
+              "on": [
+                "삼성",
+                "롯데",
+                "신한",
+                "NH농협",
+                "우리"
+              ],
+              "off": [
+                "국민",
+                "현대",
+                "BC계열"
+              ],
+              "sub": "※ NH농협은 <b>농협BC 제외</b> · 국민/현대카드 제외"
+            },
+            "deliverInfo": {
+              "months": 3,
+              "head": "판매월 + 3개월 인도조건"
+            },
+            "big": [
+              {
+                "item": "TV",
+                "cb": "10만",
+                "models": [
+                  {
+                    "model": "KQ77SF90AFXKR",
+                    "tag": "소진"
+                  },
+                  {
+                    "model": "KQ65SF90AFXKR",
+                    "tag": "물류"
+                  },
+                  {
+                    "model": "KQ77SF85AEXKR",
+                    "tag": "소진"
+                  },
+                  {
+                    "model": "KQ65SF85AEXKR",
+                    "tag": "소진"
+                  },
+                  {
+                    "model": "KQ83SF8EBEXKR",
+                    "tag": "소진"
+                  },
+                  {
+                    "model": "KQ77SF8EAEXKR",
+                    "tag": "물류"
+                  },
+                  {
+                    "model": "KQ65SF8EAEXKR",
+                    "tag": "소진"
+                  },
+                  {
+                    "model": "KQ83SH90AEXKR",
+                    "tag": ""
+                  },
+                  {
+                    "model": "KQ85QNF85AFXKR",
+                    "tag": "소진"
+                  },
+                  {
+                    "model": "KQ75QNF85BFXKR",
+                    "tag": "소진"
+                  },
+                  {
+                    "model": "KQ77SH85AEXKR",
+                    "tag": ""
+                  },
+                  {
+                    "model": "KMR85RH85AFXKR",
+                    "tag": ""
+                  },
+                  {
+                    "model": "KU85MH80AFXKR",
+                    "tag": ""
+                  }
+                ],
+                "notes": []
+              },
+              {
+                "item": "2ndTV",
+                "cb": "5만",
+                "models": [
+                  {
+                    "model": "KQ48SH85AEXKR",
+                    "tag": ""
+                  },
+                  {
+                    "model": "KU50MH70AFXKR",
+                    "tag": ""
+                  },
+                  {
+                    "model": "KU43MH70AFXKR",
+                    "tag": ""
+                  },
+                  {
+                    "model": "TV,냉장고,김냉 2주차부터 5만으로 축소운영",
+                    "tag": ""
+                  }
+                ],
+                "notes": [
+                  "프리스타일(소진완료-제외)"
+                ]
+              },
+              {
+                "item": "냉장고",
+                "cb": "10만",
+                "models": [
+                  {
+                    "model": "RM80F91K1A",
+                    "tag": ""
+                  },
+                  {
+                    "model": "RM70F64R1X",
+                    "tag": ""
+                  },
+                  {
+                    "model": "RM70F64M2ZG",
+                    "tag": ""
+                  },
+                  {
+                    "model": "RM70F91R1ZG",
+                    "tag": ""
+                  },
+                  {
+                    "model": "RM80F91M1XJ",
+                    "tag": ""
+                  }
+                ],
+                "notes": []
+              },
+              {
+                "item": "김치냉장고",
+                "cb": "10만",
+                "models": [
+                  {
+                    "model": "RK70F49F1ZG",
+                    "tag": ""
+                  },
+                  {
+                    "model": "RK70F42F2X",
+                    "tag": ""
+                  },
+                  {
+                    "model": "RQ49DB940101",
+                    "tag": "소진"
+                  },
+                  {
+                    "model": "RK80F42C2W",
+                    "tag": "소진"
+                  },
+                  {
+                    "model": "RQ42DB94J2AP",
+                    "tag": "소진"
+                  }
+                ],
+                "notes": []
+              },
+              {
+                "item": "에어컨",
+                "cb": "5만",
+                "models": [
+                  {
+                    "model": "AF19DX838VSN",
+                    "tag": ""
+                  },
+                  {
+                    "model": "AF80F19D25BN",
+                    "tag": ""
+                  },
+                  {
+                    "model": "AF70F17D11WN",
+                    "tag": ""
+                  },
+                  {
+                    "model": "AF70F19D11WN",
+                    "tag": ""
+                  },
+                  {
+                    "model": "AF60F19D11GN",
+                    "tag": "소진"
+                  },
+                  {
+                    "model": "AF80F19D25WN",
+                    "tag": "기획"
+                  }
+                ],
+                "notes": []
+              },
+              {
+                "item": "세탁기",
+                "cb": "5만",
+                "models": [
+                  {
+                    "model": "WF80F25BDW",
+                    "tag": ""
+                  },
+                  {
+                    "model": "WF80F25BDY",
+                    "tag": ""
+                  },
+                  {
+                    "model": "WF2522HDBBA",
+                    "tag": "",
+                    "combo": [
+                      "WF25CB8790BB",
+                      "DV22DB8770BB"
+                    ],
+                    "comboCb": "10만"
+                  },
+                  {
+                    "model": "WH90F2520AAHY",
+                    "tag": "",
+                    "combo": [
+                      "WF90F25ABY",
+                      "DV90F20ABY"
+                    ],
+                    "comboCb": "10만"
+                  },
+                  {
+                    "model": "WH90F2520BBHS",
+                    "tag": "",
+                    "combo": [
+                      "WF90F25BBS",
+                      "DV90F20BBS"
+                    ],
+                    "comboCb": "10만"
+                  },
+                  {
+                    "model": "WD90F25CHW",
+                    "tag": ""
+                  },
+                  {
+                    "model": "WD90F25CHY",
+                    "tag": ""
+                  },
+                  {
+                    "model": "WD90F25AHS",
+                    "tag": ""
+                  },
+                  {
+                    "model": "WD90H25BHW",
+                    "tag": ""
+                  },
+                  {
+                    "model": "WD90H25BHY",
+                    "tag": ""
+                  },
+                  {
+                    "model": "WD90H25AHS",
+                    "tag": ""
+                  }
+                ],
+                "notes": []
+              },
+              {
+                "item": "건조기",
+                "cb": "5만",
+                "models": [
+                  {
+                    "model": "DV80F20DDW",
+                    "tag": ""
+                  },
+                  {
+                    "model": "DV80F20DDY",
+                    "tag": ""
+                  }
+                ],
+                "notes": []
+              },
+              {
+                "item": "에어드레서",
+                "cb": "5만",
+                "models": [
+                  {
+                    "model": "DF24CB9600WR",
+                    "tag": ""
+                  },
+                  {
+                    "model": "DF24CB9600ER",
+                    "tag": ""
+                  },
+                  {
+                    "model": "DF80H24R1D",
+                    "tag": ""
+                  },
+                  {
+                    "model": "DF80H24R1P",
+                    "tag": ""
+                  },
+                  {
+                    "model": "DF90H24R4D",
+                    "tag": ""
+                  }
+                ],
+                "notes": []
+              },
+              {
+                "item": "DVM-HOME",
+                "cb": "5만",
+                "models": [
+                  {
+                    "model": "AJ030RXH4BC1",
+                    "tag": ""
+                  },
+                  {
+                    "model": "AJ030MXHNBC1",
+                    "tag": ""
+                  },
+                  {
+                    "model": "AJ040MXHNBC1",
+                    "tag": ""
+                  },
+                  {
+                    "model": "AJ040RXH4BC1",
+                    "tag": ""
+                  }
+                ],
+                "notes": []
+              }
+            ],
+            "small": [
+              {
+                "item": "청소기",
+                "cb": "5만",
+                "models": [
+                  {
+                    "model": "VR7MD97716H",
+                    "tag": ""
+                  },
+                  {
+                    "model": "VR7MD96516G",
+                    "tag": ""
+                  },
+                  {
+                    "model": "VS28D950ACB",
+                    "tag": ""
+                  },
+                  {
+                    "model": "VS90F40CRG",
+                    "tag": ""
+                  },
+                  {
+                    "model": "VS28D950ACA",
+                    "tag": ""
+                  }
+                ],
+                "notes": [
+                  "로봇신모델제외"
+                ]
+              },
+              {
+                "item": "공청기",
+                "cb": "5만",
+                "models": [
+                  {
+                    "model": "AX100DB990UDD",
+                    "tag": ""
+                  },
+                  {
+                    "model": "AP90F08163EDD",
+                    "tag": ""
+                  },
+                  {
+                    "model": "AP90H10163EDD",
+                    "tag": ""
+                  },
+                  {
+                    "model": "AP90H10198UDD",
+                    "tag": ""
+                  }
+                ],
+                "notes": []
+              },
+              {
+                "item": "전기레인지",
+                "cb": "5만",
+                "models": [
+                  {
+                    "model": "NZ63DB607CAWS",
+                    "tag": ""
+                  },
+                  {
+                    "model": "NZ63DB607CABS",
+                    "tag": ""
+                  },
+                  {
+                    "model": "NZ63DB553CFT",
+                    "tag": ""
+                  },
+                  {
+                    "model": "CC80H63U1HS",
+                    "tag": ""
+                  }
+                ],
+                "notes": []
+              },
+              {
+                "item": "식기세척기",
+                "cb": "5만",
+                "models": [
+                  {
+                    "model": "DW60BB815UAP",
+                    "tag": ""
+                  },
+                  {
+                    "model": "DW90F79P1UAP",
+                    "tag": ""
+                  },
+                  {
+                    "model": "DW90F79P1U01",
+                    "tag": ""
+                  }
+                ],
+                "notes": []
+              },
+              {
+                "item": "MWO",
+                "cb": "3만",
+                "models": [],
+                "notes": [
+                  "제외"
+                ]
+              },
+              {
+                "item": "홈씨어터(추가)",
+                "cb": "5만",
+                "models": [
+                  {
+                    "model": "HW-Q800H/KR",
+                    "tag": ""
+                  },
+                  {
+                    "model": "HW-Q800F/KR",
+                    "tag": "단종"
+                  }
+                ],
+                "notes": []
+              }
+            ],
+            "stores": []
+          },
+          "lg": {
+            "name": "LG",
+            "cards": {
+              "label": "5대 카드",
+              "on": [
+                "삼성",
+                "롯데",
+                "신한",
+                "NH농협",
+                "우리"
+              ],
+              "off": [
+                "국민",
+                "현대",
+                "BC계열"
+              ],
+              "sub": "※ NH농협은 <b>농협BC 제외</b> · 국민/현대카드 제외"
+            },
+            "deliverInfo": {
+              "months": 1,
+              "head": "판매월 + 1개월 인도조건"
+            },
+            "big": [
+              {
+                "item": "TV",
+                "cb": "10만",
+                "models": [
+                  {
+                    "model": "OLED77B6XNA.AKRG",
+                    "tag": ""
+                  },
+                  {
+                    "model": "OLED65B6XNA.AKRG",
+                    "tag": ""
+                  },
+                  {
+                    "model": "86MRGB86BKA.AKRG",
+                    "tag": ""
+                  },
+                  {
+                    "model": "85QNED92AGA.AKRQ",
+                    "tag": ""
+                  },
+                  {
+                    "model": "85QNED82BKA.AKRG",
+                    "tag": ""
+                  },
+                  {
+                    "model": "75QNED82BKA.AKRG",
+                    "tag": ""
+                  }
+                ],
+                "notes": []
+              },
+              {
+                "item": "냉장고",
+                "cb": "10만",
+                "models": [
+                  {
+                    "model": "G646GBB081.AKOR",
+                    "tag": ""
+                  },
+                  {
+                    "model": "M876GBC472.AKOR",
+                    "tag": ""
+                  },
+                  {
+                    "model": "M876AAA472.AKOR",
+                    "tag": ""
+                  }
+                ],
+                "notes": []
+              },
+              {
+                "item": "김치냉장고",
+                "cb": "10만",
+                "models": [
+                  {
+                    "model": "Z495GBB251.AKOR",
+                    "tag": ""
+                  },
+                  {
+                    "model": "Z495GBB212.AKOR",
+                    "tag": ""
+                  }
+                ],
+                "notes": []
+              },
+              {
+                "item": "에어컨(멀티한정)",
+                "cb": "5만",
+                "models": [
+                  {
+                    "model": "FQ18GV5EA2.AKOR",
+                    "tag": ""
+                  },
+                  {
+                    "model": "FQ18GV5EA2M.AKOR",
+                    "tag": ""
+                  },
+                  {
+                    "model": "FQ18GV3EB2.AKOR",
+                    "tag": ""
+                  },
+                  {
+                    "model": "FQ18GV3EB2M.AKOR",
+                    "tag": ""
+                  },
+                  {
+                    "model": "FQ18GU1BB2.AKOR",
+                    "tag": ""
+                  },
+                  {
+                    "model": "FQ18GU1BB2M.AKOR",
+                    "tag": ""
+                  },
+                  {
+                    "model": "FQ18GC3EB2.AKOR",
+                    "tag": ""
+                  },
+                  {
+                    "model": "FQ18GC3EB2M.AKOR",
+                    "tag": ""
+                  },
+                  {
+                    "model": "FQ18FV4ET2.AKOR",
+                    "tag": ""
+                  },
+                  {
+                    "model": "FQ18FV4ET2M.AKOR",
+                    "tag": ""
+                  },
+                  {
+                    "model": "FQ18FU1BB2.AKOR",
+                    "tag": ""
+                  },
+                  {
+                    "model": "FQ18FU1BB2M.AKOR",
+                    "tag": ""
+                  }
+                ],
+                "notes": []
+              },
+              {
+                "item": "세탁/건조기(복합형)",
+                "cb": "10만",
+                "models": [
+                  {
+                    "model": "WA2525EGHF.AKOR",
+                    "tag": ""
+                  },
+                  {
+                    "model": "WA2525GEHF.AKOR",
+                    "tag": ""
+                  },
+                  {
+                    "model": "W2520WHM.AKOR",
+                    "tag": ""
+                  },
+                  {
+                    "model": "WL22GEHU.AKOR",
+                    "tag": ""
+                  },
+                  {
+                    "model": "FH25ESX.CKOR",
+                    "tag": ""
+                  },
+                  {
+                    "model": "FH25EAX.CKOR",
+                    "tag": ""
+                  },
+                  {
+                    "model": "X4WN-G8WNW.AKOR",
+                    "tag": ""
+                  },
+                  {
+                    "model": "X4WN-G8WNW.AKOR2",
+                    "tag": ""
+                  },
+                  {
+                    "model": "KX4WN-G8WNW.AKOR",
+                    "tag": ""
+                  },
+                  {
+                    "model": "KX4WN-G8WNW.AKOR2",
+                    "tag": ""
+                  }
+                ],
+                "notes": []
+              },
+              {
+                "item": "세탁/건조기(단품)",
+                "cb": "5만",
+                "models": [
+                  {
+                    "model": "FX24WN.AKOR",
+                    "tag": ""
+                  },
+                  {
+                    "model": "FX24WN.AKOR2",
+                    "tag": ""
+                  },
+                  {
+                    "model": "RG18WNWT.AKOR",
+                    "tag": ""
+                  },
+                  {
+                    "model": "FX25EF.AKOR",
+                    "tag": ""
+                  },
+                  {
+                    "model": "RD25GS.AKOR",
+                    "tag": ""
+                  }
+                ],
+                "notes": []
+              }
+            ],
+            "small": [
+              {
+                "item": "스타일러",
+                "cb": "5만",
+                "models": [],
+                "notes": []
+              },
+              {
+                "item": "청소기",
+                "cb": "5만",
+                "models": [
+                  {
+                    "model": "A720WA.CKOR",
+                    "tag": "",
+                    "amt": "3만"
+                  },
+                  {
+                    "model": "AI948WA.BKOR",
+                    "tag": ""
+                  },
+                  {
+                    "model": "AI927BA.BKOR",
+                    "tag": ""
+                  }
+                ],
+                "notes": []
+              },
+              {
+                "item": "식기세척기",
+                "cb": "5만",
+                "models": [
+                  {
+                    "model": "DEE6BGE.AKOR",
+                    "tag": ""
+                  },
+                  {
+                    "model": "DUE6BGH1E.AKOR",
+                    "tag": ""
+                  }
+                ],
+                "notes": []
+              },
+              {
+                "item": "전기레인지",
+                "cb": "5만",
+                "models": [
+                  {
+                    "model": "BEI3AMB4E.AKOR",
+                    "tag": ""
+                  },
+                  {
+                    "model": "BEI3ANHLE.AKOR",
+                    "tag": ""
+                  },
+                  {
+                    "model": "BEI3ASMLE.AKOR",
+                    "tag": ""
+                  }
+                ],
+                "notes": []
+              },
+              {
+                "item": "공기청정기",
+                "cb": "5만",
+                "models": [
+                  {
+                    "model": "AS356NGMA.AKOR",
+                    "tag": ""
+                  },
+                  {
+                    "model": "AS356NSHH.AKOR",
+                    "tag": ""
+                  },
+                  {
+                    "model": "FS065PSKA.AKOR",
+                    "tag": ""
+                  },
+                  {
+                    "model": "DQ205PSVA.AKOR",
+                    "tag": "",
+                    "amt": "3만"
+                  },
+                  {
+                    "model": "AS185LGAA.AKOR",
+                    "tag": "",
+                    "amt": "3만"
+                  }
+                ],
+                "notes": []
+              },
+              {
+                "item": "정수기",
+                "cb": "5만",
+                "models": [
+                  {
+                    "model": "WD524VCT.AKOR",
+                    "tag": ""
+                  },
+                  {
+                    "model": "WD523VCT.AKOR",
+                    "tag": ""
+                  },
+                  {
+                    "model": "WU923AS.AKOR",
+                    "tag": ""
+                  },
+                  {
+                    "model": "WD722RH.AKOR",
+                    "tag": ""
+                  }
+                ],
+                "notes": []
+              }
+            ],
+            "stores": []
+          }
+        },
+        "periodWarn": "※ 삼성·LG 기간 상이 주의"
+      }
+    }
+  },
+  "gudok": null
+}
