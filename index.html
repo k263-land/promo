@@ -166,6 +166,8 @@ td.code{font-variant-numeric:tabular-nums;color:var(--ink-2);letter-spacing:.02e
 .cb-note{margin-top:10px;font-size:13px;color:var(--ink-2);padding-left:14px;position:relative}
 .cb-note::before{content:"ㆍ";position:absolute;left:0;color:var(--lg-red)}
 .cb-note.cb-note-blue::before{color:var(--ss-blue)}
+/* ★260812 품목수별 혜택 하단 라이트 안내 — 가독성 위해 본문보다 크게 */
+.cb-note.cb-note-blue{font-size:14.5px;font-weight:600;color:var(--ink)}
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 @media(max-width:640px){.grid2{grid-template-columns:1fr}}
 .kv{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
@@ -282,6 +284,7 @@ body.m .cb thead th.cbh-first{font-weight:600}
 .cb .rowh .rowh-sub{margin-left:3px}
 body.m .cb .sum td{font-size:11.5px}
 body.m .cb-note{font-size:11px}
+body.m .cb-note.cb-note-blue{font-size:12.5px}
 /* 기타 상세 섹션 */
 body.m .card{padding:13px 14px}
 body.m .grid2{gap:8px}
@@ -333,6 +336,7 @@ body.m .cards{display:block}
   .cb th,.cb td{padding:5px 4px;font-size:10.5px}
   .cb .sum td{font-size:11.5px}
   .cb-note{font-size:10px;margin-top:5px}
+  .cb-note.cb-note-blue{font-size:11.5px}
   .grid2{gap:6px}
   .kv{padding:8px 10px;border-radius:8px}
   .kv .k{font-size:9.5px;margin-bottom:3px}
@@ -711,6 +715,9 @@ body.m .rt-ex2{display:block;margin-top:3px}
 .ss-lt-head{font-size:13.5px;font-weight:700;padding:11px 14px 6px;line-height:1.6}
 .ss-lt-notes{margin:0;padding:0 14px 10px 30px;font-size:12.5px;color:var(--ink-2);line-height:1.75}
 .ss-lt-notes li{margin:1px 0}
+/* ★260812 라이트 안내 하단 별도 문구 (ul 밖 — 불릿 중복 방지) */
+.ss-lt-foot{padding:2px 14px 11px 16px;font-size:12.5px;font-weight:700;color:var(--ss-blue);line-height:1.6}
+body.m .ss-lt-foot{font-size:11.5px}
 /* 모델군 열 — 모델코드 열과 달리 줄바꿈 허용(한글 장문 존재: '25년 세탁기 BESPOKE AI 콤보 (프리미엄)') */
 table.dm-tbl th.th-mg{white-space:nowrap}
 table.dm-tbl td.td-mg{font-size:12.5px;color:var(--ink-2);font-weight:600;min-width:104px;line-height:1.45}
@@ -832,7 +839,7 @@ body.m table.dm-tbl td.td-mg{font-size:11.5px;min-width:88px}
    ㆍEXPIRES    : 자체 만료일 (YYYY-MM-DD). 이 날짜 이후 열람 시 차단 화면 표시.
                   월 단위 판촉이므로 익월 초로 설정해두면 구버전 방치 방지 가능. ""면 비활성.
    ════════════════════════════════════════════════════════════ */
-const APP_VER = "260811";
+const APP_VER = "260812";
 /* ★260801 비밀번호 화면 참고 안내 — meta.json의 gate_notice가 우선, 없을 때만 아래 기본값 사용.
    ⚠️ 문구는 meta.json으로 관리할 것. index.html을 고치면 URL 배포본 전체를 교체해야 한다. */
 const GATE_NOTICE_DEFAULT = [
@@ -1422,6 +1429,7 @@ function renderSS(kind){
 function ssLightHead(L){
   return "<div class='card ss-lt-info'><div class='ss-lt-head'>"+(L.head||'')+"</div>"+
     ((L.notes||[]).length?"<ul class='ss-lt-notes'>"+(L.notes||[]).map(function(n){return "<li>"+n+"</li>";}).join("")+"</ul>":"")+
+    (L.noteFoot?"<div class='ss-lt-foot'>"+L.noteFoot+"</div>":"")+   /* ★260812 */
     "</div>";
 }
 /* ── ★260805 현재 탭의 데이터 소스 반환 (라이트 없으면 항상 스마트) ── */
