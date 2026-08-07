@@ -1,0 +1,27 @@
+{
+  "app_ver": 260818,
+  "min_ver": "260797",
+  "block": false,
+  "message": "판촉 내용이 갱신되었습니다. 화면을 새로고침(재접속)해 주시기 바랍니다.",
+  "download_url": "https://portal.etland.co.kr/ekp/view/board/article/brdAtclViewPopup?atclId=BA206166916805792006356&access=",
+  "updated_at": "2026-08-07",
+  "note": "260818 = 통합조회(모델 통합검색·crossBadges·추천모델) 3곳이 다품목 v1/v2 기간필터(ver필드)를 무시하던 버그 수정 — 이제 dmVerDetail() 공용. 데이터: 스타일러 SC5MBR71.AKOR v2대상 복귀.",
+  "gate_enabled": true,
+  "gate_hash": "8c7773b5e8cd0d9f5189daf88c0a949040320c82ed7076876487b6f2f8ac1cbd",
+  "gate_msg": "비밀번호는 그룹웨어 판촉게시판 공지를 확인해 주세요.",
+  "gate_url": "https://portal.etland.co.kr/ekp/view/board/article/brdAtclViewPopup?atclId=BA206166916805792006356&access=",
+  "gate_hash_admin": "888df25ae35772424a560c7152a1de794440e0ea5cfee62828333a456a506e05",
+  "gate_update": "LG 올스타/인샵연합 추가(RONi 제외 주의), 월다품목 RONi 추가",
+  "gate_notice_title": "※ 참고 안내_8/7일",
+  "gate_notice": [
+    "LG 월다품목 - 청소기 RONi 추가(8/7일)",
+    "LG 올스타 2주차, LG 인샵연합 추가(8/6일)",
+    "로봇 청소기 RONi는 판촉대상 제외(주의)",
+    "LG 월다품목 27LX6TPGA.AKR 추가(참고)",
+    "LG 월다품목 스타일러 26년 모델만 대상(주의)",
+    "기존 엑셀/PPT 등 공지 병행",
+    "주요 변경 발생 시 PW 변경(게시판 안내)"
+  ],
+  "soft_min_ver": "260818",
+  "soft_msg": "최신본이 있습니다. ↻ 갱신 후 이용해 주세요."
+}
