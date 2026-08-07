@@ -1,0 +1,27 @@
+{
+  "app_ver": 260814,
+  "min_ver": "260797",
+  "block": false,
+  "message": "판촉 내용이 갱신되었습니다. 화면을 새로고침(재접속)해 주시기 바랍니다.",
+  "download_url": "https://portal.etland.co.kr/ekp/view/board/article/brdAtclViewPopup?atclId=BA206166916805792006356&access=",
+  "updated_at": "2026-07-31",
+  "note": "260814 = LG 랜드온리 TV 3모델 구독X 뱃지·비고 + min_ver 폐기(필드 삭제, 홈화면 저장 무한차단 해소) + soft_min_ver 비차단 갱신. ※ gate_update·gate_notice는 현장 반영본 그대로 보존.",
+  "gate_enabled": true,
+  "gate_hash": "99e0eef4f35f5558a9bb2f1eb68c1a2d419e27c3103d3a52342f389c62c4845c",
+  "gate_msg": "비밀번호는 그룹웨어 판촉게시판 공지를 확인해 주세요.",
+  "gate_url": "https://portal.etland.co.kr/ekp/view/board/article/brdAtclViewPopup?atclId=BA206166916805792006356&access=",
+  "gate_hash_admin": "888df25ae35772424a560c7152a1de794440e0ea5cfee62828333a456a506e05",
+  "gate_update": "LG 올스타/인샵연합 추가(RONi 제외 주의), 월다품목 RONi 추가",
+  "gate_notice_title": "※ 참고 안내_8/7일",
+  "gate_notice": [
+    "LG 월다품목 - 청소기 RONi 추가(8/7일)",
+    "LG 올스타 2주차, LG 인샵연합 추가(8/6일)",
+    "로봇 청소기 RONi는 판촉대상 제외(주의)",
+    "LG 월다품목 27LX6TPGA.AKR 추가(참고)",
+    "LG 월다품목 스타일러 26년 모델만 대상(주의)",
+    "기존 엑셀/PPT 등 공지 병행",
+    "주요 변경 발생 시 PW 변경(게시판 안내)"
+  ],
+  "soft_min_ver": "260814",
+  "soft_msg": "최신본이 있습니다. ↻ 갱신 후 이용해 주세요."
+}
