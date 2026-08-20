@@ -1,0 +1,26 @@
+{
+  "app_ver": 260826,
+  "min_ver": "260797",
+  "block": false,
+  "message": "판촉 내용이 갱신되었습니다. 화면을 새로고침(재접속)해 주시기 바랍니다.",
+  "download_url": "https://portal.etland.co.kr/ekp/view/board/article/brdAtclViewPopup?atclId=BA206166916805792006356&access=",
+  "updated_at": "2026-08-20",
+  "note": "260826 = 쿠쿠 추가판촉을 다품목과 별도 판촉(cuckoo_addon)으로 분리(홈카드 2장). 냉장고+선풍기 addon 명칭/강조 변경(캐시백 태그+상단 강조박스). 쿠쿠 모델조회 좌측 품목군명·구독뱃지 추가. 다품목더블 안내문구 축약. LG 프리미어 신규 반영(300/500/700/1000만 구간, 3주차 20개점). LG 인샵연합 3주차 확정 반영(8개점, 현대스페이스1점 제외).",
+  "gate_enabled": true,
+  "gate_hash": "d599230adb5fb88d5afe8d715f15de190441712ac2539d7c49678cab8c2c7ba1",
+  "gate_msg": "비밀번호는 그룹웨어 판촉게시판 공지를 확인해 주세요.(PC접속가능)",
+  "gate_url": "https://portal.etland.co.kr/ekp/view/board/article/brdAtclViewPopup?atclId=BA206166916805792006356&access=",
+  "gate_hash_admin": "888df25ae35772424a560c7152a1de794440e0ea5cfee62828333a456a506e05",
+  "gate_update": "쿠쿠 다품목 추가 반영_8.20일",
+  "gate_notice_title": "※ 참고 안내_8/13일",
+  "gate_notice": [
+    "LG 올스타 대상점 확정반영(8/14일)",
+    "랜드온리는 LG올스타 대상점만 진행(삼성 미진행)",
+    "LG 월다품목 적용구간 변경주의(8/11일~)",
+    "LG 입주/혼수 판촉 3,4주차 미진행(주의)",
+    "기존 엑셀/PPT 등 공지 병행",
+    "주요 변경 발생 시 PW 변경(게시판 안내)"
+  ],
+  "soft_min_ver": "260826",
+  "soft_msg": "최신본이 있습니다. ↻ 갱신 후 이용해 주세요."
+}
