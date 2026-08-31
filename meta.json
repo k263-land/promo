@@ -1,0 +1,25 @@
+{
+  "app_ver": 260901,
+  "min_ver": "260797",
+  "block": false,
+  "message": "판촉 내용이 갱신되었습니다. 화면을 새로고침(재접속)해 주시기 바랍니다.",
+  "download_url": "https://portal.etland.co.kr/ekp/view/board/article/brdAtclViewPopup?atclId=BA206166916805792006356&access=",
+  "updated_at": "2026-08-31",
+  "note": "260901 = 26.9월 전환 — LG 월다품목·삼성 스마트PKG·LG 구독FST·쿠쿠 다품목/추가판촉 4종 반영. 판촉기준_통합_v2.1 SET구성 갱신분으로 setmap.json 재생성(판촉 관련분 필터). 쿠쿠 추가판촉 4종으로 확대(안마기기 신규), 번들이 냉장고+선풍기→김치냉장고+믹서기로 교체.",
+  "gate_enabled": true,
+  "gate_hash": "d58631faec63e0674acda30b39a097045f3631d6f60e054dc3ed85cc44ed48ab",
+  "gate_msg": "비밀번호는 그룹웨어 판촉게시판 공지를 확인해 주세요.(PC접속가능)",
+  "gate_url": "https://portal.etland.co.kr/ekp/view/board/article/brdAtclViewPopup?atclId=BA206166916805792006356&access=",
+  "gate_hash_admin": "888df25ae35772424a560c7152a1de794440e0ea5cfee62828333a456a506e05",
+  "gate_update": "26.9월 판촉 반영_8.31일",
+  "gate_notice_title": "※ 참고 안내_8/31일",
+  "gate_notice": [
+    "LG월다품목, 삼성스마트PKG, 구독FST, 쿠쿠",
+    "쿠쿠 다품목더블 9월 1·2주차만 운영",
+    "쿠쿠 추가판촉 4종(안마기기 신규 / 김치냉장고+믹서기)",
+    "기존 엑셀/PPT 등 공지 병행 (해당url은 통합 참고용)",
+    "주요 변경 발생 시 PW 변경(게시판 안내)"
+  ],
+  "soft_min_ver": "260901",
+  "soft_msg": "최신본이 있습니다. ↻ 갱신 후 이용해 주세요."
+}
