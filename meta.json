@@ -1,0 +1,26 @@
+{
+  "app_ver": 260902,
+  "min_ver": "260797",
+  "block": false,
+  "message": "판촉 내용이 갱신되었습니다. 화면을 새로고침(재접속)해 주시기 바랍니다.",
+  "download_url": "https://portal.etland.co.kr/ekp/view/board/article/brdAtclViewPopup?atclId=BA206166916805792006356&access=",
+  "updated_at": "2026-08-31",
+  "note": "260902 = LG 월다품목 담당자 제공 \"모델list_신규\" DB(그룹No 1~29)로 전면 재반영 — 대물23·소물6 전품목 모델코드 확보(490모델, 기존 12개 미제공 품목 해소). 전월비(8월→9월) 비교를 modeldiff에서 monthdiff 필드로 정정 이동. 쿠쿠 다품목에도 전월비교 참고 표기 UI 신설(dapum과 동일 패턴).",
+  "gate_enabled": true,
+  "gate_hash": "b331bc6f8de60dd50d279f2a1a1c749c506baa201d020bda27c9523c51760488",
+  "gate_msg": "비밀번호는 그룹웨어 판촉게시판 공지를 확인해 주세요.(PC접속가능)",
+  "gate_url": "https://portal.etland.co.kr/ekp/view/board/article/brdAtclViewPopup?atclId=BA206166916805792006356&access=",
+  "gate_hash_admin": "888df25ae35772424a560c7152a1de794440e0ea5cfee62828333a456a506e05",
+  "gate_update": "26.9월 판촉 반영_8.31일",
+  "gate_notice_title": "※ 참고 안내_8/31일",
+  "gate_notice": [
+    "※ 참고 안내_8/31일",
+    "26.9월 LG월다품목, 구독FST, 삼성_삼스패, 쿠쿠 반영",
+    "쿠쿠 다품목더블 9월 1·2주차만 운영",
+    "쿠쿠 판촉 4종(안마기기 신규 / 김치냉장고+믹서기)",
+    "기존 엑셀/PPT 등 공지 병행",
+    "해당url은 통합 참고용- 개별 공지 必 확인"
+  ],
+  "soft_min_ver": "260902",
+  "soft_msg": "최신본이 있습니다. ↻ 갱신 후 이용해 주세요."
+}
