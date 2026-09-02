@@ -1,0 +1,25 @@
+{
+  "app_ver": 260906,
+  "min_ver": "260797",
+  "block": false,
+  "message": "판촉 내용이 갱신되었습니다. 화면을 새로고침(재접속)해 주시기 바랍니다.",
+  "download_url": "https://portal.etland.co.kr/ekp/view/board/article/brdAtclViewPopup?atclId=BA206166916805792006356&access=",
+  "updated_at": "2026-09-02",
+  "note": "260906 = 삼성 판촉 홈카드 순서 고정(스마트PKG→삼.세.판 모델별→삼.세.판 금액대). 모델별 헤드라인 강조배너 신설. 금액대를 \"삼.세.판 금액대\"로 개칭, 26.7월 서식(cbSum 강조행) 적용, 1,000만 구간 강조. 금액대 대상지점을 담당자 제공 84개점으로 교체(기존 전지점 114개 가정 폐기).",
+  "gate_enabled": true,
+  "gate_hash": "d599230adb5fb88d5afe8d715f15de190441712ac2539d7c49678cab8c2c7ba1",
+  "gate_msg": "비밀번호는 그룹웨어 판촉게시판 공지를 확인해 주세요.(PC접속가능)",
+  "gate_url": "https://portal.etland.co.kr/ekp/view/board/article/brdAtclViewPopup?atclId=BA206166916805792006356&access=",
+  "gate_hash_admin": "888df25ae35772424a560c7152a1de794440e0ea5cfee62828333a456a506e05",
+  "gate_update": "26.9월 삼세판 추가_9.2일",
+  "gate_notice_title": "※ 참고 안내_9/2일",
+  "gate_notice": [
+    "삼.세.판 캐시백 신규 추가(금액대 + 모델별 2탭)",
+    "삼.세.판 금액대 : 1주차(9/4~9/7) 전점 · 2주차는 미확정",
+    "삼.세.판 모델별 : 월간(9/2~9/30) 전점 · 72종, 3품목↑",
+    "해당url은 통합 참고용으로 활용, 개별 개시판촉 必 확인",
+    "주요 변경 발생 시 PW 변경(게시판 안내)"
+  ],
+  "soft_min_ver": "260906",
+  "soft_msg": "최신본이 있습니다. ↻ 갱신 후 이용해 주세요."
+}
