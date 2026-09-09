@@ -1,0 +1,25 @@
+{
+  "app_ver": 260910,
+  "min_ver": "260797",
+  "block": false,
+  "message": "판촉 내용이 갱신되었습니다. 화면을 새로고침(재접속)해 주시기 바랍니다.",
+  "download_url": "https://portal.etland.co.kr/ekp/view/board/article/brdAtclViewPopup?atclId=BA259701423233754006311&access=",
+  "updated_at": "2026-09-10",
+  "note": "260910 = LG 올스타 2주차(50개점, 9/11~9/14) 확정 반영(1주차 34개점 유지, 총 84개점) · 삼성 삼.세.판 금액대 2주차를 1주차와 동일 84개점으로 확정 반영(9/11~9/14, 당초 특정점 검토에서 1주차와 동일 지점으로 최종 확정, 총 168행) · index.html 변경 없음(데이터만).",
+  "gate_enabled": true,
+  "gate_hash": "d58631faec63e0674acda30b39a097045f3631d6f60e054dc3ed85cc44ed48ab",
+  "gate_msg": "비밀번호는 그룹웨어 판촉게시판 공지를 확인해 주세요.(PC접속가능)",
+  "gate_url": "https://portal.etland.co.kr/ekp/view/board/article/brdAtclViewPopup?atclId=BA259701423233754006311&access=",
+  "gate_hash_admin": "888df25ae35772424a560c7152a1de794440e0ea5cfee62828333a456a506e05",
+  "gate_update": "2주차 LG올스타·SS삼세판 금액대 확정 반영_9.10일",
+  "gate_notice_title": "※ 참고 안내_9/10일",
+  "gate_notice": [
+    "삼.세.판 캐시백 신규 추가(금액대 + 모델별 2탭)",
+    "삼.세.판 금액대 : 1·2주차(9/4~9/14) 전점 확정",
+    "삼.세.판 모델별 : 월간(9/2~9/30) 전점 · 72종, 3품목↑",
+    "해당url은 통합 참고용으로 활용, 개별 개시판촉 必 확인",
+    "주요 변경 발생 시 PW 변경(게시판 안내)"
+  ],
+  "soft_min_ver": "260906",
+  "soft_msg": "최신본이 있습니다. ↻ 갱신 후 이용해 주세요."
+}
