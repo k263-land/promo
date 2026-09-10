@@ -1,0 +1,27 @@
+{
+  "app_ver": 260912,
+  "min_ver": "260797",
+  "block": false,
+  "message": "판촉 내용이 갱신되었습니다. 화면을 새로고침(재접속)해 주시기 바랍니다.",
+  "download_url": "https://portal.etland.co.kr/ekp/view/board/article/brdAtclViewPopup?atclId=BA259701423233754006311&access=",
+  "updated_at": "2026-09-10",
+  "note": "260912 = 랜드온리 2주차(9/11~9/14) 전지점 확정 반영(LG만, 삼성은 1주차와 동일하게 미확정 상태 유지) · LG 소형가전에 스타일러 신규 추가(4개 모델, 5만) · 쿠쿠 다품목 '대상범위' 카드에 구독모델 추가 강조안내(scopeNote) 신설 — index.html 변경(renderCuckoo() 조건부 강조줄, APP_VER 260912) · 소스: 랜드온리_26_09월_v2.xlsx.",
+  "gate_enabled": true,
+  "gate_hash": "3d1dff321f5229e1d62213951a71e0b7250ddc31da22bd185420d9f3f042eac6",
+  "gate_msg": "비밀번호는 그룹웨어 판촉게시판 공지를 확인해 주세요.(PC접속가능)",
+  "gate_url": "https://portal.etland.co.kr/ekp/view/board/article/brdAtclViewPopup?atclId=BA259701423233754006311&access=",
+  "gate_hash_admin": "888df25ae35772424a560c7152a1de794440e0ea5cfee62828333a456a506e05",
+  "gate_update": "랜드온리 2주차(전지점)·스타일러 추가, 쿠쿠 대상범위 안내 강조_9.10일",
+  "gate_notice_title": "※ 참고 안내_9/10일",
+  "gate_notice": [
+    "삼.세.판 캐시백 신규 추가(금액대 + 모델별 2탭)",
+    "삼.세.판 금액대 : 1·2주차(9/4~9/14) 전점 확정",
+    "삼.세.판 모델별 : 월간(9/2~9/30) 전점 · 72종, 3품목↑",
+    "해당url은 통합 참고용으로 활용, 개별 개시판촉 必 확인",
+    "주요 변경 발생 시 PW 변경(게시판 안내)",
+    "쿠쿠 다품목 : 구독모델추가 반영(정수기·매트리스 등 확대, 제습기·프레임 등 신규)",
+    "랜드온리 : 2주차(9/11~9/14) 전지점 확정(LG, 스타일러 추가) · 삼성은 미정"
+  ],
+  "soft_min_ver": "260912",
+  "soft_msg": "최신본이 있습니다. ↻ 갱신 후 이용해 주세요."
+}
