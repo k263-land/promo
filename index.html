@@ -941,7 +941,7 @@ body.m table.dm-tbl td.td-mg{font-size:11.5px;min-width:88px}
    ㆍEXPIRES    : 자체 만료일 (YYYY-MM-DD). 이 날짜 이후 열람 시 차단 화면 표시.
                   월 단위 판촉이므로 익월 초로 설정해두면 구버전 방치 방지 가능. ""면 비활성.
    ════════════════════════════════════════════════════════════ */
-const APP_VER = "260912";
+const APP_VER = "260914";
 /* ★260801 비밀번호 화면 참고 안내 — meta.json의 gate_notice가 우선, 없을 때만 아래 기본값 사용.
    ⚠️ 문구는 meta.json으로 관리할 것. index.html을 고치면 URL 배포본 전체를 교체해야 한다. */
 const GATE_NOTICE_DEFAULT = [
@@ -2537,6 +2537,10 @@ function buildMonthBar(){
     <select id="monthSel" aria-label="조회 월 선택" style="width:auto;height:34px;font-size:13px;padding:0 10px;border-radius:8px;border:none">${opts}</select>
     <span id="pastBadge" style="display:none;background:#B07C1F;color:#fff;font-size:11px;font-weight:800;border-radius:999px;padding:3px 11px"><span class="pb-full">지난 판촉 · 참고용</span><span class="pb-short">지난 판촉</span></span>`;
   }
+  /* ★260914 모델 단품 정책 공유(오늘의 집중모델) 바로가기 — 조회월/지난판촉 배지 우측 */
+  html+=`<a href="https://script.google.com/macros/s/AKfycbwoPn3aMYFmwa-TfvBNVjbvrsfZfPijbgdGLKn-vB62ITJW_bHjRF-r4jUfZXZfSeSZ/exec" target="_blank" rel="noopener noreferrer"
+    style="height:34px;display:inline-flex;align-items:center;padding:0 14px;font-size:12.5px;font-weight:800;color:#fff;text-decoration:none;white-space:nowrap;
+    background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.42);border-radius:8px">집중모델↗</a>`;
   if(isAdmin){
     html+=`<button type="button" id="btnStoreReset" onclick="resetStoreList()" title="지점 조회 결과를 지우고 초기 상태로 돌립니다"
       style="display:none;margin-left:auto;height:34px;padding:0 14px;font-size:12.5px;font-weight:800;color:#fff;cursor:pointer;
