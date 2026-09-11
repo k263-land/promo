@@ -1,17 +1,17 @@
 {
-  "app_ver": 260913,
+  "app_ver": 260914,
   "min_ver": "260797",
   "block": false,
   "message": "판촉 내용이 갱신되었습니다. 화면을 새로고침(재접속)해 주시기 바랍니다.",
   "download_url": "https://portal.etland.co.kr/ekp/view/board/article/brdAtclViewPopup?atclId=BA259701423233754006311&access=",
   "updated_at": "2026-09-10",
-  "note": "260913 = LG 올스타 2주차 4개점 순증 반영(광평점·울산삼산점·평택본점·수송점, 총 88행) · manifest.json 보유월 확장(26.6~9월 4개월 → 26.5~9월 5개월, 향후 폴더 삭제 방침 폐지·전체 보관으로 전환) · index.html 변경 없음(데이터만).",
+  "note": "260914 = 헤더 조회월 옆에 '집중모델↗' 바로가기 버튼 신설 — 모델 단품 정책 공유 페이지(상품팀 판촉 종합 가이드ㆍ오늘의 집중모델, GAS) 새 탭 링크. 버튼은 조회월 셀렉트·지난판촉 배지 우측에 위치(기존 ↺지점초기화와 동일 톤 스타일 재사용, 신규 CSS 없음). index.html 변경 — APP_VER 260912→260914, soft_min_ver 동반 갱신.",
   "gate_enabled": true,
   "gate_hash": "3d1dff321f5229e1d62213951a71e0b7250ddc31da22bd185420d9f3f042eac6",
   "gate_msg": "비밀번호는 그룹웨어 판촉게시판 공지를 확인해 주세요.(PC접속가능)",
   "gate_url": "https://portal.etland.co.kr/ekp/view/board/article/brdAtclViewPopup?atclId=BA259701423233754006311&access=",
   "gate_hash_admin": "888df25ae35772424a560c7152a1de794440e0ea5cfee62828333a456a506e05",
-  "gate_update": "LG올스타 2주차 4개점 추가, 판촉이력 5월분까지 조회 확대_9.10일",
+  "gate_update": "헤더에 '집중모델↗' 바로가기 버튼 추가_9.10일",
   "gate_notice_title": "※ 참고 안내_9/10일",
   "gate_notice": [
     "삼.세.판 캐시백 신규 추가(금액대 + 모델별 2탭)",
@@ -22,6 +22,6 @@
     "쿠쿠 다품목 : 구독모델추가 반영(정수기·매트리스 등 확대, 제습기·프레임 등 신규)",
     "랜드온리 : 2주차(9/11~9/14) 전지점 확정(LG, 스타일러 추가) · 삼성은 미정"
   ],
-  "soft_min_ver": "260912",
+  "soft_min_ver": "260914",
   "soft_msg": "최신본이 있습니다. ↻ 갱신 후 이용해 주세요."
 }
