@@ -1,0 +1,27 @@
+{
+  "app_ver": 260915,
+  "min_ver": "260797",
+  "block": false,
+  "message": "판촉 내용이 갱신되었습니다. 화면을 새로고침(재접속)해 주시기 바랍니다.",
+  "download_url": "https://portal.etland.co.kr/ekp/view/board/article/brdAtclViewPopup?atclId=BA259701423233754006311&access=",
+  "updated_at": "2026-09-10",
+  "note": "260915 = 3주차(9/18~) 일괄 반영: LG 올스타 3주차(양주·경기광주 2점,9/18~21), LG 인샵연합 3주차(7점,9/18~28,기존 9점中 2점 제외), 삼성 삼세판 금액대 3주차(15점 지정,9/18~21), 쿠쿠 다품목 더블캐시백 3주차 구간 추가(9/18~28)+제외품목 확대(건조기·로봇청소기中CRVC-BAC0510NW). 랜드온리 3주차 신규(양주·경기광주 2점 한정,9/18~21, 전지점 아님). ★LG 프리미어 신규 도입(20점,9/18~28,300만↑ 구간별 캐시백 8%) — promo_order 편입. index.html 변경 없음(기존 제네릭 카드/renderPromo 템플릿으로 렌더).",
+  "gate_enabled": true,
+  "gate_hash": "3d1dff321f5229e1d62213951a71e0b7250ddc31da22bd185420d9f3f042eac6",
+  "gate_msg": "비밀번호는 그룹웨어 판촉게시판 공지를 확인해 주세요.(PC접속가능)",
+  "gate_url": "https://portal.etland.co.kr/ekp/view/board/article/brdAtclViewPopup?atclId=BA259701423233754006311&access=",
+  "gate_hash_admin": "888df25ae35772424a560c7152a1de794440e0ea5cfee62828333a456a506e05",
+  "gate_update": "9월 3주차(9/18~) 판촉 일괄 반영",
+  "gate_notice_title": "※ 참고 안내_9/17일",
+  "gate_notice": [
+    "LG 프리미어 : 20개점, 9/18~9/28일",
+    "삼.세.판 금액대 : 9/18~9/21, 15개점",
+    "쿠쿠 다품목 더블캐시백 : 9/18~9/28 연장",
+    "삼.세.판 캐시백 신규 추가(금액대 + 모델별 2탭)",
+    "삼.세.판 모델별 : 월간(9/2~9/30) 전점 · 72종, 3품목↑",
+    "해당url은 통합 참고용으로 활용, 개별 개시판촉 必 확인",
+    "주요 변경 발생 시 PW 변경(게시판 안내)"
+  ],
+  "soft_min_ver": "260912",
+  "soft_msg": "최신본이 있습니다. ↻ 갱신 후 이용해 주세요."
+}
