@@ -239,6 +239,7 @@ body.m .rf-short{display:inline}
 .step .d .dm{display:block;font-size:10px;font-weight:600;color:var(--ink-3);margin-top:3px;line-height:1.3}
 .step .m{font-size:11px;color:var(--ink-3);margin-top:5px;line-height:1.4}
 .step.hot .d{background:#F7E9EE;color:var(--lg-red)}
+.pb-wrap{margin-top:14px}.pb-t{font-size:13px;font-weight:800;margin-bottom:6px;color:var(--ink)}.pb-tbl td,.pb-tbl th{text-align:center;white-space:nowrap}.pb-delay{color:var(--lg-red);font-weight:800}.pb-same{color:var(--ink-3)}.pb-warn{margin-top:8px;font-size:12.5px;line-height:1.5;color:var(--lg-red);background:#FFF4F4;border:1px solid #F3C9CB;border-radius:8px;padding:8px 10px}
 .flow-note{margin-top:12px;font-size:13px;color:var(--ink-2);padding-left:14px;position:relative}
 .flow-note::before{content:"ㆍ";position:absolute;left:0;color:var(--lg-red)}
 .flow-note b{color:var(--lg-red)}
@@ -944,7 +945,7 @@ body.m table.dm-tbl td.td-mg{font-size:11.5px;min-width:88px}
    ㆍEXPIRES    : 자체 만료일 (YYYY-MM-DD). 이 날짜 이후 열람 시 차단 화면 표시.
                   월 단위 판촉이므로 익월 초로 설정해두면 구버전 방치 방지 가능. ""면 비활성.
    ════════════════════════════════════════════════════════════ */
-const APP_VER = "260916";
+const APP_VER = "261001";
 /* ★260801 비밀번호 화면 참고 안내 — meta.json의 gate_notice가 우선, 없을 때만 아래 기본값 사용.
    ⚠️ 문구는 meta.json으로 관리할 것. index.html을 고치면 URL 배포본 전체를 교체해야 한다. */
 const GATE_NOTICE_DEFAULT = [
@@ -1507,6 +1508,35 @@ function ssDeliverInfo(mk){
   ];
   return {deliverHead:deliverHead, flow:flow};
 }
+/* ★261001 삼성 지급기준 변경(10월 판매분~) — 판매월 기준 2회 묶음 지급.
+   ① 당월~M+1 인도분 → 1차(M+2월 반영) / ② M+2~M+3 인도분 → 2차(M+4월 반영). 데이터 payRule:"bundle2" 월에만 적용(이전 월 불변). */
+function ssYM(m,k){ var t=m+k-1; return {mo:(t%12)+1, yr:26+Math.floor(t/12)}; }
+function ssYMl(m,k){ var x=ssYM(m,k); return x.yr+"."+x.mo+"월"; }
+function ssBundleInfo(mk){
+  var m=parseInt(mk.split('-')[1],10);
+  var mo=function(k){ return ssYM(m,k).mo+"월"; };
+  var deliverHead="<span style='color:var(--lg-red)'>26."+m+"월</span> 판매건은 <b>"+ssYMl(m,3)+"까지</b> 인도 완료 必 — 판매월 기준 <b>2회 묶음 지급</b> (판매월 포함 4개월 이내 인도건 인정)";
+  var flow=[
+    ["판매","26."+m+"월","행사기간 내",1],
+    ["인도 ①",ssYMl(m,0).replace("월","")+"~"+mo(1),"1차 · 당월~M+1 인도분",1],
+    ["인도 ②",ssYMl(m,2).replace("월","")+"~"+ssYMl(m,3),"2차 · M+2~M+3 인도분",1],
+    ["반영","①"+ssYMl(m,2)+" ②"+ssYMl(m,4),"묶음별 C/B 반영",0],
+    ["지급","①"+mo(2)+"末~"+mo(3)+"初 ②"+mo(4)+"末~"+mo(5)+"初","카드사별 상이",0]
+  ];
+  return {deliverHead:deliverHead, flow:flow, flowNote:"<b>"+ssYMl(m,4)+" 이후 인도건은 지급 불가</b> ("+ssYMl(m,3)+"까지 인도 완료 必)"};
+}
+function ssBundleTable(mk){
+  var m=parseInt(mk.split('-')[1],10);
+  var mo=function(k){ return ssYM(m,k).mo+"월"; };
+  var rows=[[0,1,2,"+1개월 지연"],[1,1,2,"동일"],[2,2,4,"+1개월 지연"],[3,2,4,"동일"]].map(function(r){
+    var delay=r[3]!=="동일", pay=mo(r[2])+"末~"+mo(r[2]+1)+"初";
+    return "<tr><td>"+ssYMl(m,r[0])+"</td><td>"+(r[1]===1?"① 1차":"② 2차")+"</td><td>"+ssYMl(m,r[2])+"</td><td>"+pay+"</td>"+
+           "<td class='"+(delay?"pb-delay":"pb-same")+"'>"+r[3]+"</td></tr>";
+  }).join("");
+  return "<div class='pb-wrap'><div class='pb-t'>지급시점 안내 (인도월별)</div>"+
+    "<div class='dm-tbl-wrap'><table class='dm-tbl pb-tbl'><thead><tr><th>인도월</th><th>묶음</th><th>반영</th><th>지급</th><th>기존 대비</th></tr></thead><tbody>"+rows+"</tbody></table></div>"+
+    "<div class='pb-warn'>⚠ 지급일정은 <b>카드사별 상이</b> · 당월("+ssYMl(m,0)+")·M+2월("+ssYMl(m,2)+") 인도분은 지급이 <b>1개월 지연</b>되므로 <b>고객 안내 시 지급시점을 반드시 고지</b></div></div>";
+}
 /* ★260828 삼성 스마트PKG 전용 인도조건 — "삼성 금액대" SSOT 기준(판매월 포함 4개월 이내 인도 인정)으로 별도 산정.
    AI신혼가전(honeymoon)은 기존 ssDeliverInfo() 그대로 사용, 스마트PKG(smart)만 이 함수로 분기. */
 function ssSmartDeliverInfo(mk){
@@ -1547,7 +1577,7 @@ function renderSS(kind){
 
   var cautHtml=(S.cautions||[]).map(function(c,i){return "<li><span class='num'>"+(i+1)+"</span>"+c+"</li>";}).join("");
 
-  var DI = isSmart ? ssSmartDeliverInfo(mk) : ssDeliverInfo(mk);   /* ★260828 스마트PKG 전용 분기 */
+  var DI = isSmart ? (S.payRule==='bundle2' ? ssBundleInfo(mk) : ssSmartDeliverInfo(mk)) : ssDeliverInfo(mk);   /* ★260828 스마트PKG 전용 분기 */
   var flowHtml=DI.flow.map(function(f){return "<div class='step"+(f[3]?" hot":"")+"'><div class='t'>"+f[0]+"</div><div class='d'>"+f[1]+(f[2]?"<span class='dm'>"+f[2]+"</span>":"")+"</div></div>";}).join("");
   var schedNote = isSmart ? "" : "‘반영’ ≠ ‘지급’, 지급조건이 불충족하면 반영을 해도 미지급 처리";   /* ★260828 스마트PKG는 제외 지시 */
 
@@ -1577,7 +1607,7 @@ function renderSS(kind){
     "</div></section>"+
   "<section><div class='sec-h'><span class='no'>02</span><h2>"+(isSmart?"스마트PKG 품목수별 혜택":"품목별 캐시백")+"</h2></div>"+benefitBox+"</section>"+
   "<section><div class='sec-h'><span class='no'>03</span><h2>인도 조건 · 캐시백 지급 스케줄</h2></div>"+
-    "<div class='card'><div class='deliver-head' style='font-size:14.5px;font-weight:700;margin-bottom:14px'>"+DI.deliverHead+"</div><div class='flow'>"+flowHtml+"</div>"+(schedNote?"<div class='flow-note'>"+schedNote+"</div>":"")+"</div></section>"+
+    "<div class='card'><div class='deliver-head' style='font-size:14.5px;font-weight:700;margin-bottom:14px'>"+DI.deliverHead+"</div><div class='flow'>"+flowHtml+"</div>"+(schedNote?"<div class='flow-note'>"+schedNote+"</div>":"")+(isSmart&&S.payRule==='bundle2'?"<div class='flow-note'>"+DI.flowNote+"</div>"+ssBundleTable(mk):"")+"</div></section>"+
   "<section><div class='sec-h'><span class='no'>04</span><h2>지급 조건 주의사항</h2></div><div class='card'><ol class='caut'>"+cautHtml+"</ol></div></section>"+
   "<section><div class='sec-h'><span class='no'>05</span><h2>대상 품목 · 모델 조회</h2><small>"+(hasLight?"탭 → 품목 선택 시 모델 리스트 표시":"품목 선택 시 모델 리스트 표시")+"</small></div>"+
     (isSmart && S.modelCaution ? "<div class='card ss-mcaut'><b>모델 조건 주의</b> "+String(S.modelCaution).split(" — ").join("<br>— ")+"</div>" : "")+
@@ -1954,6 +1984,7 @@ function renderCuckoo(){
   var commonHtml=(D.cond.common||[]).map(function(c){return "<li>"+c+"</li>";}).join("");
   var excludeHtml=(D.cond.excludeDouble||[]).map(function(c){return "<li>"+c+"</li>";}).join("");
   var weeksHtml=(D.weeks||[]).map(function(w){return "<span class='wk'>"+w.label+" ("+w.range+")</span>"+(w.extend?"<span class='wk-ext'>"+w.extend+"</span>":"");}).join("");
+  var hasDbl=!!(D.weeks&&D.weeks.length);
   var cautHtml=CUCKOO_CAUT.map(function(c,i){return "<li><span class='num'>"+(i+1)+"</span>"+c+"</li>";}).join("");
   /* ★260904 적용카드 데이터기반화 */
   var _ckOn=D.cardTags||['삼성','롯데','신한','NH농협','우리'];
@@ -1970,14 +2001,14 @@ function renderCuckoo(){
       "<div class='kv'><div class='k'>적용 카드 — "+_ckOn.length+"대 카드</div><div class='v'>"+_ckCardV+"</div><div class='sub'>"+_ckSub+"</div></div>"+
       "<div class='kv'><div class='k'>공통 조건</div><div class='v' style='font-size:13px;font-weight:500'><ul class='ss-lt-notes' style='padding-left:16px;margin:0'>"+commonHtml+"</ul></div></div>"+
     "</div></section>"+
-  "<section><div class='sec-h'><span class='no'>02</span><h2>다품목더블 — 지정 주차 2배 적용</h2></div>"+
+  (hasDbl ? "<section><div class='sec-h'><span class='no'>02</span><h2>다품목더블 — 지정 주차 2배 적용</h2></div>"+
     "<div class='ck-dbl-box'><div class='t'>⚠ 아래 주차 진행 건은 캐시백 금액이 2배 적용됩니다</div>"+
     weeksHtml+
     (excludeHtml?"<ul class='ss-lt-notes' style='padding-left:16px;margin-top:8px'>"+excludeHtml+"</ul>":"")+
+    "</div></section>" : "")+   /* ★261001 더블 주차 없는 월(10월~)은 섹션 비노출·번호 당김 */
+  "<section><div class='sec-h'><span class='no'>"+(hasDbl?"03":"02")+"</span><h2>지급 조건 주의사항</h2></div><div class='card'><ol class='caut'>"+cautHtml+"</ol>"+
     "</div></section>"+
-  "<section><div class='sec-h'><span class='no'>03</span><h2>지급 조건 주의사항</h2></div><div class='card'><ol class='caut'>"+cautHtml+"</ol>"+
-    "</div></section>"+
-  "<section><div class='sec-h'><span class='no'>04</span><h2>대상 품목 · 모델 조회</h2><small>탭 → 품목 선택 시 모델·캐시백 표시</small></div>"+
+  "<section><div class='sec-h'><span class='no'>"+(hasDbl?"04":"03")+"</span><h2>대상 품목 · 모델 조회</h2><small>탭 → 품목 선택 시 모델·캐시백 표시</small></div>"+
     "<div class='dm-tabs'>"+
       "<button type='button' class='dm-tab "+(ckTab==='ilsibul'?'on':'')+"' data-cktab='ilsibul'>일시불 <span class='c'>"+ilCnt+"</span></button>"+
       "<button type='button' class='dm-tab "+(ckTab==='gudok'?'on':'')+"' data-cktab='gudok'>구독 <span class='c'>"+gdCnt+"</span></button>"+
@@ -2102,6 +2133,8 @@ function renderSSModel(){
   var cardOn=(M.cardTags||[]).map(function(t){return "<span class='tag'>"+t+"</span>";}).join("");
   var cardOff=(M.cardOff||[]).map(function(t){return "<span class='tag x'>"+t+"</span>";}).join("");
   var caut=(M.cautions||[]).map(function(c,i){return "<li><span class='num'>"+(i+1)+"</span>"+c+"</li>";}).join("");
+  var _bi = M.payRule==='bundle2' ? ssBundleInfo(mk) : null;
+  var _bflow = _bi ? _bi.flow.map(function(f){return "<div class='step"+(f[3]?" hot":"")+"'><div class='t'>"+f[0]+"</div><div class='d'>"+f[1]+(f[2]?"<span class='dm'>"+f[2]+"</span>":"")+"</div></div>";}).join("") : "";
 
   $("#view-promo").innerHTML=
   "<section><div class='sec-h'><span class='no'>01</span><h2>운영 요약</h2><small>"+(M.written?"작성 "+M.written:"")+"</small></div>"+
@@ -2111,8 +2144,9 @@ function renderSSModel(){
       "<div class='kv'><div class='k'>대상 범위</div><div class='v'>15개 품목군 <span class='hl'>("+M.count+"종)</span></div></div>"+
       "<div class='kv'><div class='k'>적용 카드 — "+(M.cardTags||[]).length+"대 카드</div><div class='v'>"+cardOn+cardOff+"</div><div class='sub'>"+(M.cardSub||"")+"</div></div>"+
     "</div></section>"+
-  "<section><div class='sec-h'><span class='no'>02</span><h2>지급 조건 주의사항</h2></div><div class='card'><ol class='caut'>"+caut+"</ol></div></section>"+
-  "<section><div class='sec-h'><span class='no'>03</span><h2>대상 품목 · 모델 조회</h2><small>품목 선택 시 모델·캐시백 표시</small></div>"+
+  (M.payRule==='bundle2' ? "<section><div class='sec-h'><span class='no'>02</span><h2>인도 조건 · 캐시백 지급 스케줄</h2></div><div class='card'><div class='deliver-head' style='font-size:14.5px;font-weight:700;margin-bottom:14px'>"+_bi.deliverHead+"</div><div class='flow'>"+_bflow+"</div><div class='flow-note'>"+_bi.flowNote+"</div>"+ssBundleTable(mk)+"</div></section>" : "")+
+  "<section><div class='sec-h'><span class='no'>"+(M.payRule==='bundle2'?"03":"02")+"</span><h2>지급 조건 주의사항</h2></div><div class='card'><ol class='caut'>"+caut+"</ol></div></section>"+
+  "<section><div class='sec-h'><span class='no'>"+(M.payRule==='bundle2'?"04":"03")+"</span><h2>대상 품목 · 모델 조회</h2><small>품목 선택 시 모델·캐시백 표시</small></div>"+
     "<div class='dm-igrid' id='sspItemGrid'></div><div class='dm-mpanel' id='sspModelPanel'></div></section>";
 
   sspRenderItems();
@@ -3002,7 +3036,7 @@ function renderPromoCards(){
     if(bk==="ck" && typeof CUCKOO_DATA!=="undefined" && CUCKOO_DATA[CUR_MONTH]){
       var CK=CUCKOO_DATA[CUR_MONTH];
       if(CK.items){
-        extra+=`<div class="pcard" data-brand="ck" onclick="go('cuckoo')"><div class="pn">쿠쿠 다품목</div><div class="pd">일시불·구독 품목별<br>정액 C/B (더블주차 2배)</div><span class="cnt ref">전지점</span></div>`;
+        extra+=`<div class="pcard" data-brand="ck" onclick="go('cuckoo')"><div class="pn">쿠쿠 다품목</div><div class="pd">일시불·구독 품목별<br>${(CK.weeks&&CK.weeks.length)?'정액 C/B (더블주차 2배)':'모델별 정액 C/B'}</div><span class="cnt ref">전지점</span></div>`;
       }
       if(CK.addon && CK.addon.length){
         extra+=`<div class="pcard" data-brand="ck" onclick="go('cuckoo_addon')"><div class="pn">쿠쿠 추가판촉</div><div class="pd">세트·묶음구매<br>별도 인센티브·캐시백</div><span class="cnt ref">전지점</span></div>`;
@@ -3853,6 +3887,7 @@ function renderPromo(p, filterCode){
       <div class="deliver-head" style="font-size:14.5px;font-weight:700;margin-bottom:14px">${P.deliverHead}</div>
       <div class="flow">${flowHtml}</div>
       <div class="flow-note">${P.flowNote.replace(/,\s*/, ',<span class="mbreak"></span>')}</div>
+      ${P.payRule==='bundle2'?ssBundleTable(CUR_MONTH):""}
     </div>
   </section>
   <section>
