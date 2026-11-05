@@ -945,7 +945,7 @@ body.m table.dm-tbl td.td-mg{font-size:11.5px;min-width:88px}
    ㆍEXPIRES    : 자체 만료일 (YYYY-MM-DD). 이 날짜 이후 열람 시 차단 화면 표시.
                   월 단위 판촉이므로 익월 초로 설정해두면 구버전 방치 방지 가능. ""면 비활성.
    ════════════════════════════════════════════════════════════ */
-const APP_VER = "261001";
+const APP_VER = "261105";
 /* ★260801 비밀번호 화면 참고 안내 — meta.json의 gate_notice가 우선, 없을 때만 아래 기본값 사용.
    ⚠️ 문구는 meta.json으로 관리할 것. index.html을 고치면 URL 배포본 전체를 교체해야 한다. */
 const GATE_NOTICE_DEFAULT = [
@@ -1786,8 +1786,8 @@ function dmGuganAll(D){
   var groups=[];
   periods.forEach(function(p){
     var key=JSON.stringify({q:p.qty,pe:p.per,s:p.sum});
-    var last=groups[groups.length-1];
-    if(last && last.key===key) last.list.push(p);
+    var g=null; for(var gi=0;gi<groups.length;gi++){ if(groups[gi].key===key){ g=groups[gi]; break; } }   /* ★261105 비연속 동일표(v1·v3)도 병합 */
+    if(g) g.list.push(p);
     else groups.push({key:key, list:[p]});
   });
   groups.forEach(function(g){ g.active=g.list.some(function(p){return p.ver===activeVer;}); });
@@ -1797,11 +1797,12 @@ function dmGuganAll(D){
 
   return groups.map(function(g){
     var list=g.list, first=list[0], last=list[list.length-1];
-    var verTag=list.map(function(p){return p.ver;}).join("~");
-    var periodTag=(list.length>1 && first.from && last.to)
+    var contig=list.every(function(p,i){ if(i===0) return true; var a=list[i-1].to, b=p.from; if(!a||!b) return true; return (new Date(b+"T00:00:00")-new Date(a+"T00:00:00"))<=2*86400000; });
+    var verTag=list.map(function(p){return p.ver;}).join(contig?"~":" · ");
+    var periodTag=(list.length>1 && first.from && last.to && contig)
       ? fmtMD(first.from)+"~"+fmtMD(last.to)+"일"
-      : first['label'].replace(/\n/g,' ');
-    var chg=list.map(function(p){return p.change;}).filter(Boolean).join(" · ");
+      : list.map(function(p){return p['label'].replace(/\n/g,' ');}).join(" · ");
+    var chg=list.map(function(p){return p.change;}).filter(function(c,i,ar){return c && ar.indexOf(c)===i;}).join(" · ");
     return "<div class='dm-gblock"+(g.active?' cur':' ref')+"'>"+
       "<div class='dm-gblock-h'><span class='ver'>"+verTag+' · '+(g.active?'현재':'참고')+"</span><span class='period'>"+periodTag+"</span></div>"+
       dmGuganOne(first)+
@@ -2236,19 +2237,19 @@ function renderDapum(){
   $("#view-promo").innerHTML=
   "<section><div class='sec-h'><span class='no'>01</span><h2>운영 요약</h2><small>작성 "+D.written+" · 최신 "+D.latestVer+"</small></div>"+
     "<div class='grid2'>"+
-      "<div class='kv'><div class='k'>적용 기간</div><div class='v'>"+periodHtml+"</div><div class='sub'><b style='color:var(--lg-red)'>기간별 대상모델 상이(주의)</b> · 2품목 이상 동시구매 時 추가 캐시백</div></div>"+
+      "<div class='kv'><div class='k'>적용 기간</div><div class='v'>"+periodHtml+"</div><div class='sub'><b style='color:var(--lg-red)'>"+(D.ganOnly?"기간별 구간표 상이(주의)</b> · 대상모델은 전 기간 동일 · ":"기간별 대상모델 상이(주의)</b> · ")+"2품목 이상 동시구매 時 추가 캐시백</div></div>"+
       "<div class='kv'><div class='k'>대상 범위</div><div class='v'>대물 "+D.items['대물'].length+" · 소물 "+D.items['소물'].length+" 품목 <span class='hl'>("+dCnt+" 모델)</span></div><div class='sub'>대형가전 = 품목수×구간 · 소형가전 = 품목당 3만원</div></div>"+
       "<div class='kv'><div class='k'>적용 카드 — "+_dmOn.length+"대 카드</div><div class='v'>"+_dmCardV+"</div><div class='sub'>"+_dmSub+"</div></div>"+
       "<div class='kv'><div class='k'>"+mLabel+" 대상품목 변경</div><div class='v' style='font-size:13px;font-weight:500'>"+changeHtml+"</div></div>"+
     "</div></section>"+
-  "<section><div class='sec-h'><span class='no'>02</span><h2>대물 구간 적용표</h2><small>"+(D.periods.length>1 && !D.ganSame?"기준 변경 시점별 병기 (v1→v2)":"대형가전 = 품목수 × 구간 적용금액")+"</small></div>"+
+  "<section><div class='sec-h'><span class='no'>02</span><h2>대물 구간 적용표</h2><small>"+(D.periods.length>1 && !D.ganSame?"기준 변경 시점별 병기 ("+D.periods.map(function(p){return p.ver;}).join("→")+")":"대형가전 = 품목수 × 구간 적용금액")+"</small></div>"+
     dmGuganAll(D)+"</section>"+
   "<section><div class='sec-h'><span class='no'>03</span><h2>인도 조건 · 캐시백 지급 스케줄</h2></div>"+
     "<div class='card'><div class='deliver-head' style='font-size:14.5px;font-weight:700;margin-bottom:14px'>"+DI.deliverHead+"</div><div class='flow'>"+flowHtml+"</div><div class='flow-note'>"+DI.flowNote+"</div></div></section>"+
   "<section><div class='sec-h'><span class='no'>04</span><h2>지급 조건 주의사항</h2></div><div class='card'><ol class='caut'>"+cautHtml+"</ol></div></section>"+
   "<section><div class='sec-h'><span class='no'>05</span><h2>대상 품목 · 모델 조회</h2><small>"+
     (D.periods.length>1
-      ? "기간(<b>"+dmCurVer(D)+"</b>) 선택 → 탭 → 품목 선택 · <b>기간별 대상모델 상이</b>"
+      ? (D.ganOnly || !dmCurVer(D) ? "탭 → 품목 선택 · <b>대상모델은 전 기간 동일</b>" : "기간(<b>"+dmCurVer(D)+"</b>) 선택 → 탭 → 품목 선택 · <b>기간별 대상모델 상이</b>")
       : "탭 → 품목 선택 시 품목군·모델 표시 (최신 "+D.latestVer+" 기준)")+"</small></div>"+
     dmVerBar(D)+
     "<div class='dm-tabs'>"+
@@ -2388,7 +2389,7 @@ function dmRenderModel(){
     boxes.push(mlines.join(""));
   }
   if(boxes.length) diffHtml="<div class='dm-diff-box'>"+boxes.join("")+"</div>";
-  var _det=dmVerDetail(D,it), _vt=(D.periods.length>1?" <span style='color:var(--lg-red)'>("+dmCurVer(D)+" 기준)</span>":"");
+  var _det=dmVerDetail(D,it), _vt=(D.periods.length>1 && dmCurVer(D)?" <span style='color:var(--lg-red)'>("+dmCurVer(D)+" 기준)</span>":"");
   if(_det.length){
     p.innerHTML="<div class='dm-mh'><span class='t'>"+it.no+". "+it.nm+"</span><span class='badge'>"+dmTab+" · "+it.models.length+"개 품목군</span></div>"+
       "<div class='dm-mb'>"+grp+"</div>"+diffHtml+
