@@ -945,7 +945,7 @@ body.m table.dm-tbl td.td-mg{font-size:11.5px;min-width:88px}
    ㆍEXPIRES    : 자체 만료일 (YYYY-MM-DD). 이 날짜 이후 열람 시 차단 화면 표시.
                   월 단위 판촉이므로 익월 초로 설정해두면 구버전 방치 방지 가능. ""면 비활성.
    ════════════════════════════════════════════════════════════ */
-const APP_VER = "261105";
+const APP_VER = "261106";
 /* ★260801 비밀번호 화면 참고 안내 — meta.json의 gate_notice가 우선, 없을 때만 아래 기본값 사용.
    ⚠️ 문구는 meta.json으로 관리할 것. index.html을 고치면 URL 배포본 전체를 교체해야 한다. */
 const GATE_NOTICE_DEFAULT = [
@@ -1346,10 +1346,10 @@ function renderLO(brand){
   var lastM=mm(mNum+DV.months);
   var deliverHead=mNum+"월 內 인도 → "+mm(mNum+1)+"월 C/B 대상반영 (인도 후 익월 반영)";
   var flow=[
-    ["판매","26."+mNum+"월","행사기간 내",1],
-    ["인도 완료","26."+mNum+"월","매월 인도검증",1],
-    ["검증","26."+mm(mNum+1)+"월 初","상품기획G 검증 必",0],
-    ["반영","26."+mm(mNum+1)+"월","C/B 대상 반영",0],
+    ["판매",_Y(mk)+"."+mNum+"월","행사기간 내",1],
+    ["인도 완료",_Y(mk)+"."+mNum+"월","매월 인도검증",1],
+    ["검증",YM(mk,mm(mNum+1))+"월 初","상품기획G 검증 必",0],
+    ["반영",YM(mk,mm(mNum+1))+"월","C/B 대상 반영",0],
     ["지급",mm(mNum+1)+"월末~"+mm(mNum+2)+"월初","카드사별 상이",0]
   ];
   var flowHtml=flow.map(function(f){return "<div class='step"+(f[3]?" hot":"")+"'><div class='t'>"+f[0]+"</div><div class='d'>"+f[1]+"<span class='dm'>"+f[2]+"</span></div></div>";}).join("");
@@ -1500,10 +1500,10 @@ function ssDeliverInfo(mk){
   function mm(mo){ return mo>12 ? (mo-12) : mo; }
   var deliverHead="<span style='color:var(--lg-red)'>"+m+"월</span> 인도 → "+mm(m+1)+"월 C/B 대상반영 (인도 후 익월 반영)";
   var flow=[
-    ["판매","26."+m+"월","행사기간 내",1],
-    ["인도 완료","26."+m+"월","매월 인도검증",1],
-    ["검증","26."+mm(m+1)+"월 初","상품기획G 검증 必",0],
-    ["반영","26."+mm(m+1)+"월","C/B 대상 반영",0],
+    ["판매",_Y(mk)+"."+m+"월","행사기간 내",1],
+    ["인도 완료",_Y(mk)+"."+m+"월","매월 인도검증",1],
+    ["검증",YM(mk,mm(m+1))+"월 初","상품기획G 검증 必",0],
+    ["반영",YM(mk,mm(m+1))+"월","C/B 대상 반영",0],
     ["지급",mm(m+1)+"월末~"+mm(m+2)+"월初","카드사별 상이",0]
   ];
   return {deliverHead:deliverHead, flow:flow};
@@ -1515,9 +1515,9 @@ function ssYMl(m,k){ var x=ssYM(m,k); return x.yr+"."+x.mo+"월"; }
 function ssBundleInfo(mk){
   var m=parseInt(mk.split('-')[1],10);
   var mo=function(k){ return ssYM(m,k).mo+"월"; };
-  var deliverHead="<span style='color:var(--lg-red)'>26."+m+"월</span> 판매건은 <b>"+ssYMl(m,3)+"까지</b> 인도 완료 必 — 판매월 기준 <b>2회 묶음 지급</b> (판매월 포함 4개월 이내 인도건 인정)";
+  var deliverHead="<span style='color:var(--lg-red)'>"+_Y(mk)+"."+m+"월</span> 판매건은 <b>"+ssYMl(m,3)+"까지</b> 인도 완료 必 — 판매월 기준 <b>2회 묶음 지급</b> (판매월 포함 4개월 이내 인도건 인정)";
   var flow=[
-    ["판매","26."+m+"월","행사기간 내",1],
+    ["판매",_Y(mk)+"."+m+"월","행사기간 내",1],
     ["인도 ①",ssYMl(m,0).replace("월","")+"~"+mo(1),"1차 · 당월~M+1 인도분",1],
     ["인도 ②",ssYMl(m,2).replace("월","")+"~"+ssYMl(m,3),"2차 · M+2~M+3 인도분",1],
     ["반영","①"+ssYMl(m,2)+" ②"+ssYMl(m,4),"묶음별 C/B 반영",0],
@@ -1537,16 +1537,18 @@ function ssBundleTable(mk){
     "<div class='dm-tbl-wrap'><table class='dm-tbl pb-tbl'><thead><tr><th>인도월</th><th>묶음</th><th>반영</th><th>지급</th><th>기존 대비</th></tr></thead><tbody>"+rows+"</tbody></table></div>"+
     "<div class='pb-warn'>⚠ 지급일정은 <b>카드사별 상이</b> · 당월("+ssYMl(m,0)+")·M+2월("+ssYMl(m,2)+") 인도분은 지급이 <b>1개월 지연</b>되므로 <b>고객 안내 시 지급시점을 반드시 고지</b></div></div>";
 }
+function _Y(mk){ return String(mk||"2026-01").slice(2,4); }
+function YM(mk,n){ var y=parseInt(String(mk).slice(2,4),10), b=parseInt(String(mk).slice(5,7),10); return (n<b?y+1:y)+"."+n; }
 /* ★260828 삼성 스마트PKG 전용 인도조건 — "삼성 금액대" SSOT 기준(판매월 포함 4개월 이내 인도 인정)으로 별도 산정.
    AI신혼가전(honeymoon)은 기존 ssDeliverInfo() 그대로 사용, 스마트PKG(smart)만 이 함수로 분기. */
 function ssSmartDeliverInfo(mk){
   var parts=mk.split('-'), m=parseInt(parts[1],10);
   function mm(mo){ return mo>12 ? (mo-12) : mo; }
   var deadline=mm(m+3);   /* 판매월 포함 4개월 = m, m+1, m+2, m+3 */
-  var deliverHead="<span style='color:var(--lg-red)'>26."+m+"월</span> 판매건은 <b>"+deadline+"월까지</b> 인도 완료 必 (판매월 포함 4개월 이내 인도건 인정)";
+  var deliverHead="<span style='color:var(--lg-red)'>"+_Y(mk)+"."+m+"월</span> 판매건은 <b>"+deadline+"월까지</b> 인도 완료 必 (판매월 포함 4개월 이내 인도건 인정)";
   var flow=[
-    ["판매","26."+m+"월","행사기간 내",1],
-    ["인도 완료","26."+m+"~"+deadline+"월","판매월 포함 4개월 이내 인정",1],
+    ["판매",_Y(mk)+"."+m+"월","행사기간 내",1],
+    ["인도 완료",_Y(mk)+"."+m+"월~"+YM(mk,deadline)+"월","판매월 포함 4개월 이내 인정",1],
     ["검증","상품기획G","인도월 익월 初 순차 검증",0],
     ["반영","순차 반영","인도월 익월 C/B 반영",0],
     ["지급","카드사별 상이","반영월末~익월初",0]
@@ -1819,13 +1821,13 @@ function dmDeliverInfo(mk){
   function mm(mo){ return mo>12 ? (mo-12) : mo; }
   var deliverHead="<span style='color:var(--lg-red)'>"+m+"월</span> 인도 → "+mm(mNext)+"월 C/B 대상반영 (인도 후 익월 반영)";
   var flow=[
-    ["판매","26."+m+"월","행사기간 내",1],
-    ["인도 완료","26."+m+"~"+mm(mDue)+"월","2개월 이내 인도건 인정",1],
-    ["검증","26."+mm(mNext)+"월 初","상품기획G 검증 必",0],
-    ["반영","26."+mm(mNext)+"월","C/B 대상 반영",0],
+    ["판매",_Y(mk)+"."+m+"월","행사기간 내",1],
+    ["인도 완료",_Y(mk)+"."+m+"~"+mm(mDue)+"월","2개월 이내 인도건 인정",1],
+    ["검증",YM(mk,mm(mNext))+"월 初","상품기획G 검증 必",0],
+    ["반영",YM(mk,mm(mNext))+"월","C/B 대상 반영",0],
     ["지급",mm(mNext)+"월末~"+mm(mPay2)+"월初","카드사별 상이",0]
   ];
-  var flowNote="26."+m+"월 판매건은 <b>"+mm(mDue)+"월까지 인도 완료 必</b> (판매월 포함 2개월 이내 인도건 인정)";
+  var flowNote=_Y(mk)+"."+m+"월 판매건은 <b>"+mm(mDue)+"월까지 인도 완료 必</b> (판매월 포함 2개월 이내 인도건 인정)";
   return {deliverHead:deliverHead, flow:flow, flowNote:flowNote};
 }
 
@@ -2434,7 +2436,7 @@ async function loadRemoteData(){
       var mfRes = await fetch(GITHUB_BASE + "manifest.json" + _bust(), {cache:"no-store"});
       if(mfRes.ok){ var mf = await mfRes.json(); months = mf.months; }
     }catch(e){}
-    if(!months || !months.length) months = ["2026-07","2026-06","2026-05"];
+    if(!months || !months.length) months = ["2026-11","2026-10","2026-09"];
     MONTHS = months.slice(); // 최신순 가정
     // ③ 지점 마스터 + 본부매핑 (없어도 동작하되, 코드게이트 정확도가 떨어짐)
     try{
@@ -2964,7 +2966,7 @@ function go(view, filterCode){
     const P=PROMOS[view];
     $("#hdTitle").innerHTML=P.title;
     const scopeN=[...PSTORE[view].values()].filter(inScope).length;
-    $("#hdMeta").innerHTML=`<span>작성 <b>26.07.16</b></span><span>${P.meta}</span><span>대상 <b>${scopeN}</b>개 지점</span>`;
+    $("#hdMeta").innerHTML=`<span>작성 <b>${String((typeof META!=="undefined"&&META&&META.updated_at)||"").slice(2).replace(/-/g,".")}</b></span><span>${P.meta}</span><span>대상 <b>${scopeN}</b>개 지점</span>`;
     showScopeBadge();
   }
   syncStoreResetBtn();
